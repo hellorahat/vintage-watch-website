@@ -36,7 +36,7 @@ function DesktopLayout() {
     const [isAccountVisible, setAccountVisible] = useState(false);
 
     const handleClickSearch = () => {
-        setSearchVisible(prevState => !prevState); // Toggle search bar visibility
+        setSearchVisible(prevState => !prevState);
     };
     const handleClickAccount = () => {
         setAccountVisible(prevState => !prevState);
