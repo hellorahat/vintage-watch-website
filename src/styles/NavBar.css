@@ -9,5 +9,5 @@
 }
 
 .btn:hover {
-    filter: brightness(0) saturate(100%) invert(44%) sepia(96%) saturate(678%) hue-rotate(198deg) brightness(95%) contrast(95%); /* Example filter */
+    filter: brightness(0) saturate(100%) invert(44%) sepia(96%) saturate(678%) hue-rotate(198deg) brightness(95%) contrast(95%);
 }
