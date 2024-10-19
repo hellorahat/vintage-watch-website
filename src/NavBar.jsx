@@ -20,7 +20,7 @@ function NavBar() {
 
 function MobileLayout() {
     return (
-        <h1>Mobile Layout</h1>
+        <h1>Mobile NavBar</h1>
     )
 }
 

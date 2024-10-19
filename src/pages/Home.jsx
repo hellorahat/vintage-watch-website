@@ -12,15 +12,19 @@ function Home() {
 }
 
 function MobileLayout() {
-    <div>
-        <h1>Mobile Home</h1>
-    </div>
+    return (
+        <div>
+            <h1>Mobile Home</h1>
+        </div>
+    )
 }
 
 function DesktopLayout() {
-    <div>
-        <h1>Desktop Home</h1>
-    </div>
+    return (
+        <div>
+            <h1>Desktop Home</h1>
+        </div>
+    )
 }
 
 

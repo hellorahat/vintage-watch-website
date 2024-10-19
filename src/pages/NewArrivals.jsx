@@ -12,15 +12,19 @@ function NewArrivals() {
 }
 
 function MobileLayout() {
-    <div>
-        <h1>Mobile New Arrivals</h1>
-    </div>
+    return (
+        <div>
+            <h1>Mobile New Arrivals</h1>
+        </div>
+    )
 }
 
 function DesktopLayout() {
-    <div>
-        <h1>Desktop New Arrivals</h1>
-    </div>
+    return (
+        <div>
+            <h1>Desktop New Arrivals</h1>
+        </div>
+    )
 }
 
 

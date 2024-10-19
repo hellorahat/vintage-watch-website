@@ -12,15 +12,19 @@ function Catalog() {
 }
 
 function MobileLayout() {
-    <div>
-        <h1>Mobile Catalog</h1>
-    </div>
+    return (
+        <div>
+            <h1>Mobile Catalog</h1>
+        </div>
+    )
 }
 
 function DesktopLayout() {
-    <div>
-        <h1>Desktop Catalog</h1>
-    </div>
+    return (
+        <div>
+            <h1>Desktop Catalog</h1>
+        </div>
+    )
 }
 
 
