@@ -5,5 +5,8 @@ import { ghPages } from 'vite-plugin-gh-pages';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), ghPages()],
-  base: '/vintage-watch-website/', 
+  base: '/vintage-watch-website/',
+  server: {
+    historyApiFallback: true
+  }
 });
