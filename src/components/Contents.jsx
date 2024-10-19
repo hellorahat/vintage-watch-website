@@ -6,6 +6,8 @@ import NewArrivals from "../pages/NewArrivals";
 import Catalog from "../pages/Catalog";
 import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
+import Favorites from "../pages/Favorites"
+import Cart from "../pages/Cart"
 
 
 function Contents() {
@@ -16,6 +18,8 @@ function Contents() {
       <Route path='/catalog' element={<Catalog />}></Route>
       <Route path='/about-us' element={<AboutUs />}></Route>
       <Route path='/contact-us' element={<ContactUs />}></Route>
+      <Route path='/favorites' element={<Favorites />}></Route>
+      <Route path='/cart' element={<Cart />}></Route>
     </Routes>
   );
 }

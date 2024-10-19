@@ -1,5 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import AccountMenu from '../components/AccountMenu'
 
@@ -8,6 +9,7 @@ import iconSearch from '../assets/search.svg'
 import iconAccount from '../assets/account.svg'
 import iconFavorite from '../assets/favorite.svg'
 import iconCart from '../assets/cart.svg'
+
 import '../styles/NavBar.css'
 
 
@@ -31,9 +33,15 @@ function MobileLayout() {
 
 function DesktopLayout() {
     const [isSearchVisible, setSearchVisible] = useState(false);
+    const [isAccountVisible, setAccountVisible] = useState(false);
+
     const handleClickSearch = () => {
         setSearchVisible(prevState => !prevState); // Toggle search bar visibility
     };
+    const handleClickAccount = () => {
+        setAccountVisible(prevState => !prevState);
+    }
+
     const renderSearchBar = () => {
         {/* Conditionally render the search bar */}
         return isSearchVisible && (
@@ -42,11 +50,6 @@ function DesktopLayout() {
             </form>
         );
     };
-
-    const [isAccountVisible, setAccountVisible] = useState(false);
-    const handleClickAccount = () => {
-        setAccountVisible(prevState => !prevState);
-    }
     const renderAccountMenu = () => {
         return isAccountVisible && (
             <AccountMenu />
@@ -58,10 +61,10 @@ function DesktopLayout() {
             <nav className="navbar bg-body-tertiary" style={{backgroundColor: '#EEEEEE'}}>
                 <div className="container-fluid">
                     {/* Logo */}
-                    <a className="navbar-brand" href="#">
+                    <Link to="/" className="navbar-brand">
                         <img src={logo} alt="Logo" width="50" height="50" />
                         <span className="custom-text">Vintage Watch Co.</span>
-                    </a>
+                    </Link>
 
                     {/* Navigation Buttons */}
                     <div className="d-flex ms-auto"> {/* Use ms-auto for margin start auto to push items to the right */}
@@ -72,12 +75,12 @@ function DesktopLayout() {
                         <button className="btn" style={{ marginLeft: '8px' }} onClick={handleClickAccount}>
                             <img src={iconAccount} alt="Account" width="30" height="30" />
                         </button>
-                        <button className="btn" style={{ marginLeft: '8px' }}>
+                        <Link to="/favorites" className="btn" style={{ marginLeft: '8px' }}>
                             <img src={iconFavorite} alt="Favorite" width="30" height="30" />
-                        </button>
-                        <button className="btn" style={{ marginLeft: '8px' }}>
+                        </Link>
+                        <Link to="/cart" className="btn" style={{ marginLeft: '8px' }}>
                             <img src={iconCart} alt="Cart" width="30" height="30" />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </nav>
