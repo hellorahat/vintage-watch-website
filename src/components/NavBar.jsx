@@ -61,7 +61,7 @@ function DesktopLayout() {
             <nav className="navbar bg-body-tertiary" style={{backgroundColor: '#EEEEEE'}}>
                 <div className="container-fluid">
                     {/* Logo */}
-                    <Link to="/" className="navbar-brand">
+                    <Link to="//" className="navbar-brand">
                         <img src={logo} alt="Logo" width="50" height="50" />
                         <span className="custom-text">Vintage Watch Co.</span>
                     </Link>
