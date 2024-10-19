@@ -1,11 +1,11 @@
 import { useMediaQuery } from 'react-responsive';
 
-import logo from './assets/Logo.svg'
-import iconSearch from './assets/search.svg'
-import iconAccount from './assets/account.svg'
-import iconFavorite from './assets/favorite.svg'
-import iconCart from './assets/cart.svg'
-import './styles/NavBar.css'
+import logo from '../assets/Logo.svg'
+import iconSearch from '../assets/search.svg'
+import iconAccount from '../assets/account.svg'
+import iconFavorite from '../assets/favorite.svg'
+import iconCart from '../assets/cart.svg'
+import '../styles/NavBar.css'
 
 function NavBar() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });

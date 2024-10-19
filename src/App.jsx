@@ -1,5 +1,5 @@
-import Contents from "./Contents"
-import NavBar from "./NavBar"
+import Contents from "./components/Contents"
+import NavBar from "./components/NavBar"
 
 function App() {
 
