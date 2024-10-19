@@ -1,12 +1,15 @@
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 
+import AccountMenu from '../components/AccountMenu'
+
 import logo from '../assets/Logo.svg'
 import iconSearch from '../assets/search.svg'
 import iconAccount from '../assets/account.svg'
 import iconFavorite from '../assets/favorite.svg'
 import iconCart from '../assets/cart.svg'
 import '../styles/NavBar.css'
+
 
 
 function NavBar() {
@@ -27,12 +30,10 @@ function MobileLayout() {
 };
 
 function DesktopLayout() {
-    const [isSearchVisible, setSearchVisible] = useState(false)
-
+    const [isSearchVisible, setSearchVisible] = useState(false);
     const handleClickSearch = () => {
         setSearchVisible(prevState => !prevState); // Toggle search bar visibility
     };
-
     const renderSearchBar = () => {
         {/* Conditionally render the search bar */}
         return isSearchVisible && (
@@ -41,7 +42,17 @@ function DesktopLayout() {
             </form>
         );
     };
-    
+
+    const [isAccountVisible, setAccountVisible] = useState(false);
+    const handleClickAccount = () => {
+        setAccountVisible(prevState => !prevState);
+    }
+    const renderAccountMenu = () => {
+        return isAccountVisible && (
+            <AccountMenu />
+        )
+    }
+
     return (
         <>
             <nav className="navbar bg-body-tertiary" style={{backgroundColor: '#EEEEEE'}}>
@@ -58,7 +69,7 @@ function DesktopLayout() {
                         <button className="btn" style={{ marginLeft: '8px' }} onClick={handleClickSearch}>
                             <img src={iconSearch} alt="Search" width="30" height="30" />
                         </button>
-                        <button className="btn" style={{ marginLeft: '8px' }}>
+                        <button className="btn" style={{ marginLeft: '8px' }} onClick={handleClickAccount}>
                             <img src={iconAccount} alt="Account" width="30" height="30" />
                         </button>
                         <button className="btn" style={{ marginLeft: '8px' }}>
@@ -69,8 +80,10 @@ function DesktopLayout() {
                         </button>
                     </div>
                 </div>
-                
             </nav>
+            <div className={`account-menu ${isAccountVisible ? 'active' : ''}`}>
+                {renderAccountMenu()}
+            </div>
         </>
     )
 }
