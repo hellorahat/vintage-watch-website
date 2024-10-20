@@ -15,6 +15,7 @@ import '../styles/NavBar.css'
 
 
 function NavBar() {
+
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
 
@@ -43,7 +44,7 @@ function DesktopLayout() {
     }
 
     const renderSearchBar = () => {
-        {/* Conditionally render the search bar */}
+        {/* Conditionally render the search bar */ }
         return isSearchVisible && (
             <form className="d-flex" role="search">
                 <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
@@ -58,7 +59,7 @@ function DesktopLayout() {
 
     return (
         <>
-            <nav className="navbar bg-body-tertiary" style={{backgroundColor: '#EEEEEE'}}>
+            <nav className="navbar bg-body-tertiary" style={{ backgroundColor: '#EEEEEE' }}>
                 <div className="container-fluid">
                     {/* Logo */}
                     <Link to="//" className="navbar-brand">
