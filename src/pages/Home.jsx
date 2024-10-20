@@ -35,7 +35,6 @@ function DesktopLayout() {
                             className="d-block w-100"
                             src={watch1}
                             alt="First slide"
-
                         />
                     </Carousel.Item>
                     <Carousel.Item>
@@ -43,7 +42,6 @@ function DesktopLayout() {
                             className="d-block w-100"
                             src={watch2}
                             alt="Second slide"
-
                         />
                     </Carousel.Item>
                     <Carousel.Item>
@@ -51,7 +49,6 @@ function DesktopLayout() {
                             className="d-block w-100"
                             src={watch3}
                             alt="Third slide"
-
                         />
                     </Carousel.Item>
                 </Carousel>
