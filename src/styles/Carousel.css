@@ -1,5 +1,14 @@
 .carousel {
-    background-color: black;
+    width: 1200px;
+    height: 400px;
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.d-block {
+    opacity: 50%;
+    height: 400px;
 }

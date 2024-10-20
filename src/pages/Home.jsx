@@ -1,5 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
 import Carousel from 'react-bootstrap/Carousel';
+import watch1 from '../assets/pexels-ferarcosn-190819.jpg'
+import watch2 from '../assets/pexels-jatin-anand-33853-125779.jpg'
+import watch3 from '../assets/pexels-joey-nguy-n-1056657-2113994.jpg'
 import '../styles/Carousel.css'
 
 function Home() {
@@ -30,28 +33,25 @@ function DesktopLayout() {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="src/assets/pexels-ferarcosn-190819.jpg"
+                            src={watch1}
                             alt="First slide"
-                            height="450"
-                            width="1400"
+
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="src/assets/pexels-jatin-anand-33853-125779.jpg"
+                            src={watch2}
                             alt="Second slide"
-                            height="450"
-                            width="1400"
+
                         />
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="src/assets/pexels-joey-nguy-n-1056657-2113994.jpg"
+                            src={watch3}
                             alt="Third slide"
-                            height="450"
-                            width="1500"
+
                         />
                     </Carousel.Item>
                 </Carousel>

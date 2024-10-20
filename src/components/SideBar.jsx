@@ -1,5 +1,5 @@
 import { useMediaQuery } from 'react-responsive';
-import { Dropdown } from 'bootstrap';
+import { Dropdown } from 'react-bootstrap';
 
 function SideBar() {
 
