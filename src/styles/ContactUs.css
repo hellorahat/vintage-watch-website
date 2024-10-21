@@ -1,0 +1,15 @@
+.iframe-container{
+    display: flex;
+    justify-content: center; 
+  
+}
+
+iframe{
+    border:0;
+}
+
+.info-container{
+   
+    margin-left: 357px;
+    align-items: left;  
+}
