@@ -1,4 +1,49 @@
-#dropdown-basic {
-    height: 50px;
-    width: 50px;
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 100;
+    height: 100%;
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar .dropdown {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.arrow.up {
+    transform: rotate(-135deg);
+}
+
+.arrow.down {
+    transform: rotate(45deg);
 }

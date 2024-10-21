@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-key */
 import { useMediaQuery } from 'react-responsive';
-import { Dropdown } from 'react-bootstrap';
+import { useState, useEffect, useRef } from 'react';
+import "../styles/SideBar.css"
 
 function SideBar() {
 
@@ -21,19 +23,30 @@ function MobileLayout() {
 };
 
 function DesktopLayout() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Dropdown Button
-            </Dropdown.Toggle>
+        <div className="sidebar">
+            <ul>
+                <li>
+                    <button onClick={toggleDropdown}>
+                        Type of Watch
+                        {isOpen ? <span className="arrow up" /> : <span className="arrow down" />}
+                    </button>
+                    {isOpen && (
+                        <ul className="dropdown">
+                            <li>Product 1</li>
+                            <li>Product 2</li>
+                        </ul>
+                    )}
+                </li>
+            </ul>
+        </div>
+    );
+};
 
-            <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>
-    )
-
-}
 export default SideBar
