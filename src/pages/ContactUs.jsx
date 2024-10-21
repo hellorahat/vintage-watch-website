@@ -1,6 +1,9 @@
 import { useMediaQuery } from 'react-responsive';
 import '../styles/ContactUs.css'
-
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid2';
 function ContactUs() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
@@ -22,31 +25,55 @@ function MobileLayout() {
 function DesktopLayout() {
     return (
         <div>
-            <h1>Desktop Contact Us</h1>
-            <MapEmbed />
-            <div className = 'info-container'>
-                <div>
-                    <h5>Address</h5>
-                    Area 51, Nevada, USA
-                </div>
-                <div>
-                    <h5>Phone</h5>
-                    123-456-7898
-                </div>
-                <div>
-                    <h5>Email</h5>
-                    contact@watchplace.com
-                </div>
-                
-            </div>
-
+            <h1>Desktop Contact Us</h1>         
+            <BasicGrid/>
         </div>
      
 
         
     )
 }
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'left',
+    color: theme.palette.text.secondary,
+    boxShadow: 'none',
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#1A2027',
+    }),
+  
+  }));
 
+ function BasicGrid() {
+    return (
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container spacing={2}>
+        <Grid size = {2}></Grid>
+          <Grid size={8}>
+            <Item><MapEmbed/ ></Item>
+          </Grid>
+          <Grid size = {2}></Grid>
+          <Grid size = {2}></Grid>
+          <Grid size={4}>
+            <Item>
+                <h5>Address</h5>
+                Area 51, Nevada, USA
+                <h5>Phone</h5>
+                (789)-456-1212
+                <h5>Email</h5>
+                contact@watchco.com
+            </Item>
+          </Grid>
+          <Grid size={4}>
+            <Item>size=4</Item>
+          </Grid>
+          <Grid size = {2}></Grid>
+        </Grid>
+      </Box>
+    );
+  }
 const MapEmbed = () => {
     return (
       <div className='iframe-container'>
