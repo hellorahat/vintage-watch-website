@@ -1,0 +1,66 @@
+.redirectory {
+    width: 100%;
+    /* Ensure the navbar takes the full width */
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* Center the links horizontally */
+    align-items: center;
+    /* Vertically center the links */
+    gap: 16px;
+    /* Space between links */
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+}
+
+.redirectory .btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    /* Set to transparent to only show the bar */
+    color: #007bff;
+    text-decoration: none;
+    border: none;
+    /* Remove default button border */
+    position: relative;
+    /* Needed for pseudo-elements */
+    transition: color 0.3s ease;
+    /* Smooth color transition */
+}
+
+.redirectory .btn:hover {
+    color: #0056b3;
+    /* Change text color on hover */
+}
+
+.redirectory .btn.active {
+    font-weight: bold;
+    /* Highlight the active link */
+}
+
+/* Bottom bar effect */
+.redirectory .btn::after {
+    content: '';
+    display: block;
+    height: 4px;
+    /* Height of the bottom bar */
+    width: 100%;
+    /* Full width */
+    background-color: #007bff;
+    /* Color of the bottom bar */
+    position: absolute;
+    bottom: -5px;
+    /* Adjusts position below the button */
+    left: 0;
+    transform: scaleX(0);
+    /* Initially hidden */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the bar */
+}
+
+/* Show the bottom bar when active or hovered */
+.redirectory .btn:hover::after,
+.redirectory .btn.active::after {
+    transform: scaleX(1);
+    /* Show the bottom bar */
+}
