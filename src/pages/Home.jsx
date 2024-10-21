@@ -44,11 +44,11 @@ function DesktopLayout() {
                             alt="Second slide"
                         />
                     </Carousel.Item>
-                    <Carousel.Item>
+                    <Carousel.Item >
                         <img
                             className="d-block w-100"
                             src={watch3}
-                            alt="Third slide"
+                            alt="Third slide" 
                         />
                     </Carousel.Item>
                 </Carousel>
