@@ -1,4 +1,4 @@
-.redirectory {
+ .Rcontainer-fluid {
     width: 100%;
     /* Ensure the navbar takes the full width */
     padding: 10px;
@@ -11,6 +11,7 @@
     gap: 16px;
     /* Space between links */
     position: relative;
+
     /* Needed for the pseudo-element positioning */
 }
 
