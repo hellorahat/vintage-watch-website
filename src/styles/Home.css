@@ -1,0 +1,10 @@
+.home_container {
+    width: 1440px;
+    height: 400px;
+    display: grid;
+    justify-content: end;
+    margin-top: 10%;
+    padding-right: 10%;
+    position: absolute;
+
+}
