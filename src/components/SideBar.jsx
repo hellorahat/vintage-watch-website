@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { useMediaQuery } from 'react-responsive';
 import { useState, useEffect, useRef } from 'react';
 import "../styles/SideBar.css"
