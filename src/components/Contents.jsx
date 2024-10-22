@@ -8,8 +8,8 @@ import AboutUs from "../pages/AboutUs";
 import ContactUs from "../pages/ContactUs";
 import Favorites from "../pages/Favorites"
 import Cart from "../pages/Cart"
-
-
+import Clock from "../pages/Clock"
+import Product from "../pages/product"
 function Contents() {
   return (
     <Routes>
@@ -20,6 +20,8 @@ function Contents() {
       <Route path='/contact-us' element={<ContactUs />}></Route>
       <Route path='/favorites' element={<Favorites />}></Route>
       <Route path='/cart' element={<Cart />}></Route>
+      <Route path='/clock' element={<Clock />}></Route>
+      <Route path='/product' element={<Product />}></Route>
     </Routes>
   );
 }

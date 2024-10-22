@@ -5,6 +5,7 @@ import watch2 from '../assets/pexels-jatin-anand-33853-125779.jpg'
 import watch3 from '../assets/pexels-joey-nguy-n-1056657-2113994.jpg'
 import '../styles/Carousel.css'
 import '../styles/Home.css'
+
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -29,12 +30,15 @@ function MobileLayout() {
 function DesktopLayout() {
     return (
         <>
+        <div>
+        <Link to="/clock">
+        test<br/>
+        </Link>
+        <Link to="/product">
+        test2
+        </Link>
+        </div>
             <div className="home_container">
-                <div className="test">
-                    <Link to="/contact-us" >
-                        test
-                    </Link>
-                </div>
                 <div className="carousel">
                     <Carousel data-bs-theme="dark">
                         <Carousel.Item>

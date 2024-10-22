@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../styles/RedirectoryBar.css'
 import { NavLink } from 'react-router-dom';
 import AccountMenu from '../components/AccountMenu'
-
+import Clock from "../pages/Clock"
 import logo from '../assets/Logo.svg'
 import iconSearch from '../assets/search.svg'
 import iconAccount from '../assets/account.svg'
@@ -29,7 +29,7 @@ function NavBar() {
 
 function MobileLayout() {
     return (
-        <h1>Mobile NavBar</h1>
+        <h1></h1>
     );
 };
 
@@ -64,7 +64,9 @@ function DesktopLayout() {
                 <div className="container-fluid">
                     {/* Logo */}
                     <Link to="//" className="navbar-brand">
-                        <img src={logo} alt="Logo" width="50" height="50" />
+                    <iframe src='Clock' title="clock" width="50" height="50"/>
+                        
+                       {/* <img src={logo} alt="Logo" width="50" height="50" />*/}
                         <span className="custom-text">Vintage Watch Co.</span>
                     </Link>
 
