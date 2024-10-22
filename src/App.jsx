@@ -8,8 +8,6 @@ function App() {
     <>
       <NavBar />
       <Contents />
-     
-
     </>
   )
 }
