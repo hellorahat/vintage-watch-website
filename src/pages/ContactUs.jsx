@@ -25,7 +25,7 @@ function MobileLayout() {
 function DesktopLayout() {
     return (
         <div>
-            <h1>Desktop Contact Us</h1>         
+            <h1 style={{ textAlign: 'center' }}>Contact Us</h1>         
             <BasicGrid/>
         </div>
      

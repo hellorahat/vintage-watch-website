@@ -3,6 +3,12 @@ import '../styles/AccountMenu.css'
 
 function AccountMenu() {
     return (
+        <SignInForm />
+    )
+}
+
+function SignInForm() {
+    return (
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>

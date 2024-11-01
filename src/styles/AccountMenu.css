@@ -4,15 +4,17 @@
     padding-right: 1em;
     padding-top: 0.5em;
     right: 1em;
-    top: 4.67em;
+    top: 6.64em;
     width: 300px;
     height: 384px;
     z-index: 1050;
     opacity: 0;
     transition: opacity 0.15s ease;
+    display: None;
 }
 
 .account-menu.active {
+    display: block;
     background-color: #e6e6e6;
     opacity: 1;
 }
