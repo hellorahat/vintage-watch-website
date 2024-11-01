@@ -44,7 +44,11 @@ function DesktopLayout() {
 
     const renderSearchBar = () => {
         {/* Conditionally render the search bar */ }
-        return isSearchVisible && (
+        if(isSearchVisible) return (
+            <form className="d-flex" role="search">
+                <input className="form-control active" type="search" placeholder="Search" aria-label="Search" />
+            </form>
+        ); else return (
             <form className="d-flex" role="search">
                 <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
             </form>

@@ -39,4 +39,16 @@
     z-index: 10;
 }
 
+.form-control[type="search"] {
+    position: relative;
+    right: -15px;
+    width: 0px;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
 
+.form-control.active[type="search"] {
+    opacity: 1;
+    width: 200px;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
