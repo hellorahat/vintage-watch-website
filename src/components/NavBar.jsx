@@ -48,7 +48,7 @@ function DesktopLayout() {
 
     return (
         <>
-            <nav className="navbar bg-body-tertiary fixed-top" style={{ backgroundColor: '#EEEEEE' }}>
+            <nav className="navbar bg-body-tertiary fixed-top" style={{ top: '30px', backgroundColor: '#EEEEEE' }}>
                 <div className="container-fluid">
                     {/* Logo */}
                     <Link to="//" className="navbar-brand">

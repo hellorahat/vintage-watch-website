@@ -24,3 +24,8 @@
     opacity: 1;
     width: 200px;
 }
+
+.navbar {
+    background-color: #EEEEEE;
+    top: 20px;
+}
