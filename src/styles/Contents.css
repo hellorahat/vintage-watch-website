@@ -1,0 +1,4 @@
+/* add space to account for navbar height */
+.contents {
+    margin-top: 10px;
+}

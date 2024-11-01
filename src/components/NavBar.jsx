@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/RedirectoryBar.css'
-import { NavLink } from 'react-router-dom';
 import AccountMenu from '../components/AccountMenu'
 import iconSearch from '../assets/search.svg'
 import iconAccount from '../assets/account.svg'
@@ -81,14 +79,14 @@ function DesktopLayout() {
             <div className={`account-menu ${isAccountVisible ? 'active' : ''}`}>
                 {renderAccountMenu()}
             </div>
-            <nav className="redirectory">
+            {/* <nav className="redirectory">
                 <div className="Rcontainer-fluid">
                     <NavLink to="/" className="btn" activeClassName="active">New Arrivals</NavLink>
                     <NavLink to="/catalog" className="btn" activeClassName="active">Catalog</NavLink>
                     <NavLink to="/about-us" className="btn" activeClassName="active">About Us</NavLink>
                     <NavLink to="/contact-us" className="btn" activeClassName="active">Contact Us</NavLink>
                 </div>
-            </nav>
+            </nav> */}
         </>
     )
 }
