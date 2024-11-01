@@ -32,7 +32,6 @@ function DesktopLayout() {
     }
 
     const renderSearchBar = () => {
-        {/* Conditionally render the search bar */ }
         if(isSearchVisible) return (
             <form className="d-flex" role="search">
                 <input className="form-control active" type="search" placeholder="Search" aria-label="Search" />
@@ -64,16 +63,16 @@ function DesktopLayout() {
                     {/* Navigation Buttons */}
                     <div className="d-flex ms-auto"> {/* Use ms-auto for margin start auto to push items to the right */}
                         {renderSearchBar()}
-                        <button className="btn" style={{ marginLeft: '8px' }} onClick={handleClickSearch}>
+                        <button id="main-nav-button" className="btn" style={{ marginLeft: '8px' }} onClick={handleClickSearch}>
                             <img src={iconSearch} alt="Search" width="30" height="30" />
                         </button>
-                        <button className="btn" style={{ marginLeft: '8px' }} onClick={handleClickAccount}>
+                        <button id="main-nav-button" className="btn" style={{ marginLeft: '8px' }} onClick={handleClickAccount}>
                             <img src={iconAccount} alt="Account" width="30" height="30" />
                         </button>
-                        <Link to="/favorites" className="btn" style={{ marginLeft: '8px' }}>
+                        <Link to="/favorites" id="main-nav-button" className="btn" style={{ marginLeft: '8px' }}>
                             <img src={iconFavorite} alt="Favorite" width="30" height="30" />
                         </Link>
-                        <Link to="/cart" className="btn" style={{ marginLeft: '8px' }}>
+                        <Link to="/cart" id="main-nav-button" className="btn" style={{ marginLeft: '8px' }}>
                             <img src={iconCart} alt="Cart" width="30" height="30" />
                         </Link>
                     </div>
