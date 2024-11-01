@@ -1,0 +1,3 @@
+button[type="submit"]:hover, button[type="create-account"]:hover {
+    color: white; /* Or any desired color */
+}

@@ -1,4 +1,3 @@
-import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/RedirectoryBar.css'
@@ -14,20 +13,10 @@ import '../styles/NavBar.css'
 
 
 function NavBar() {
-
-    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
-
-
     return (
         <>
-            {isMobile ? <MobileLayout /> : <DesktopLayout />}
+            <DesktopLayout />
         </>
-    );
-};
-
-function MobileLayout() {
-    return (
-        <h1></h1>
     );
 };
 
