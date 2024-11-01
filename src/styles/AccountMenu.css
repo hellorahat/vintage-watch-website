@@ -1,17 +1,20 @@
 .account-menu {
-    position: absolute;
+    position: fixed;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5em;
     right: 1em;
-    top: 6.54em;
+    top: 4.67em;
     width: 300px;
     height: 384px;
-    z-index: 10;
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.15s ease;
 }
 
 .account-menu.active {
     background-color: #e6e6e6;
+    opacity: 1;
 }
 
 .account-menu.active::after {
@@ -22,5 +25,5 @@
     border-left: 14px solid transparent;  /* Adjust size for the triangle */
     border-right: 14px solid transparent; /* Adjust size for the triangle */
     border-bottom: 20px solid #e6e6e6;  /* Color of the triangle */
-    z-index: 10;
+    z-index: 1050;
 }
