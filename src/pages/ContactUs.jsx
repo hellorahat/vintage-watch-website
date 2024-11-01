@@ -56,12 +56,12 @@ const Item = styled(Paper)(({ theme }) => ({
           </Grid>
           <Grid size = {2}></Grid>
           <Grid size = {2}></Grid>
-          <Grid size={4}>
+          <Grid className="about" size={4}>
             <Item>
                 <h5>Address</h5>
-                Area 51, Nevada, USA
+                Area 51, Nevada, USA<br/><br/>
                 <h5>Phone</h5>
-                (789)-456-1212
+                (789)-456-1212<br/><br/>
                 <h5>Email</h5>
                 contact@watchco.com
             </Item>

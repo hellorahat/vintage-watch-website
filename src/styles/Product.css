@@ -1,7 +1,25 @@
-table, th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
+
+
+.dataTable {
+    border: 1px solid lightgray; /* Horizontal line */
+    width: auto;
+    border-collapse: collapse;
+}
+  
+.dataTable th, .dataTable td {
+    border-bottom: 1px solid lightgray; /* Horizontal line */
+    padding: 8px; /* Optional padding */
 }
 
+.itemPicBox {
+        display: flex;
+        justify-Content: center;   
+        align-Items: center;          
+        text-Align: center;          
+}
 
+.gridB{
+    justify-Content: center;   
+    align-Items: center;    
+    height: 100%;  
+}

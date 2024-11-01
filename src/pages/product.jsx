@@ -13,24 +13,17 @@ function Product() {
 
     return (
         <>
-            {isMobile ? <MobileLayout /> : <DesktopLayout />}
+           <DesktopLayout />
         </>
     )
 }
 
-function MobileLayout() {
-    return (
-        <div>
-            <h1>Mobile Home</h1>
-            
-        </div>
-    )
-}
+
 
 function DesktopLayout() {
     return (
         <div>
-             <h1>Watch Information</h1>
+             <h1>Watch Information</h1><br/><br/>
       {/*    <h1>Watch Information</h1>
                    <img src= {watch} alt='casio'/>
             <hr/>
@@ -62,7 +55,7 @@ const Item = styled(Paper)(({ theme }) => ({
     padding: theme.spacing(1),
     textAlign: 'left',
     color: theme.palette.text.secondary,
-   
+
     ...theme.applyStyles('dark', {
       backgroundColor: '#1A2027',
     }),
@@ -71,12 +64,14 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function BasicGrid() {
     return (
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2}>
+      <Box sx={{ flexGrow: 1}}>
+        <Grid className="gridB" container spacing={2}>
         <Grid size = {2}></Grid>
-          <Grid size={4}>
-            <Item><img src= {watch} alt='casio'/></Item>
+
+          <Grid size={4} className="itemPicBox">
+            <Item><img className="itemPic" src= {watch} alt='casio'/></Item>
           </Grid>
+
           <Grid size={4}>
             <Item>     
                 Brand<br/>
@@ -89,6 +84,7 @@ function BasicGrid() {
           </Grid>
 
           <Grid size = {2}></Grid>
+
           <Grid size = {2}></Grid>
           <Grid size={4}>
             <Item>
@@ -98,7 +94,7 @@ function BasicGrid() {
           </Grid>
           <Grid size={4}>
             <Item>
-            <table> 
+            <table className='dataTable'> 
                 <tr><td>Type of watch</td></tr>
                 <tr><td>Brand</td></tr>
                 <tr><td>Model</td></tr>      

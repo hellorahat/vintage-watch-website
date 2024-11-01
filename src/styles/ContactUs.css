@@ -13,3 +13,8 @@ iframe{
     margin-left: 357px;
     align-items: left;  
 }
+
+.about{
+    border-right: 1px solid lightgray;
+    
+}
