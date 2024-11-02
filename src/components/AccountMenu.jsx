@@ -8,27 +8,12 @@ import '../styles/AccountMenu.css'
 
 function AccountMenu() {
     const { user } = useUser();
-    return (
-        <>
-            {user ? <AccountSettings /> : <SignInForm />}
-        </>
-    )
-}
-
-const isValidEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-};
-
-function SignInForm() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [error, setErrorMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
     const [fadeOutError, setFadeOutError] = useState(false);
     const [fadeOutSuccess, setFadeOutSuccess] = useState(false);
-    const { setUser } = useUser();
 
+    
     const showErrorMessage = (message) => {
         setErrorMessage(message);
         setFadeOutError(false);
@@ -50,6 +35,53 @@ function SignInForm() {
             }, 500); // Wait for fade-out to complete before clearing
         }, 3000);
     };
+
+    const resetMessages = () => {
+        setFadeOutError(false);
+        setFadeOutSuccess(false);
+    };
+
+
+    return (
+        <>
+            {user ? (
+                <AccountSettings 
+                    showErrorMessage={showErrorMessage}
+                    showSuccessMessage={showSuccessMessage}
+                    resetMessages={resetMessages}  // Ensure this is included
+                />
+            ) : (
+                <SignInForm 
+                    showErrorMessage={showErrorMessage}
+                    showSuccessMessage={showSuccessMessage}
+                    resetMessages={resetMessages}  // Ensure this is included
+                />
+            )}
+            {/* alerts for error or success */}
+            {error && (
+                <div className={`alert alert-danger mt-3 ${fadeOutError ? 'hidden' : ''}`}>
+                    {error}
+                </div>
+            )}
+            {successMessage && (
+                <div className={`alert alert-success mt-3 ${fadeOutSuccess ? 'hidden' : ''}`}>
+                    {successMessage}
+                </div>
+            )}
+        </>
+    )
+}
+
+const isValidEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+};
+
+function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const { setUser } = useUser();
 
     const handleSignIn = async (event) => {
         event.preventDefault();
@@ -100,7 +132,7 @@ function SignInForm() {
 
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
+            const user = userCredential.user
 
             // Send verification email
             await sendEmailVerification(user);
@@ -113,11 +145,6 @@ function SignInForm() {
                 showErrorMessage(error.message)
             }
         }
-    };
-
-    const resetMessages = () => {
-        setFadeOutError(false);
-        setFadeOutSuccess(false);
     };
 
     return (
@@ -157,26 +184,32 @@ function SignInForm() {
                 <p className="mt-4 mb-0 me-2">Don't have an account?</p>
                 <button type="create-account" className="btn btn-primary me-2" onClick={handleCreateAccount}>Create Account</button>
             </div>
-
-            {/* alerts for error or success */}
-            {error && (
-                <div className={`alert alert-danger mt-3 ${fadeOutError ? 'hidden' : ''}`}>
-                    {error}
-                </div>
-            )}
-            {successMessage && (
-                <div className={`alert alert-success mt-3 ${fadeOutSuccess ? 'hidden' : ''}`}>
-                    {successMessage}
-                </div>
-            )}
         </form>
     )
 }
 
-function AccountSettings() {
-    const { user } = useUser();
+function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) {
+    const { setUser, user } = useUser();
+
+    const handleSignOut = async(event) => {
+        event.preventDefault();
+
+        try {
+            await auth.signOut();
+            setUser(null);
+            console.log("Signed out Successfully!");
+        } catch(error) {
+            console.log(error.message);
+        }
+    }
+
     return (
-        <p>Hello, {user.email}!</p>
+        <>
+            <p>Hello, {user.email}!</p>
+            <div className="d-flex flex-column justify-content-center">
+                <button type="submit" className="btn btn-primary me-2" onClick={handleSignOut}>Sign Out</button>
+            </div>
+        </>
     )
 }
 
