@@ -22,7 +22,7 @@ function Home() {
   return (
     <>
       <div>
-        <Link to="/clock">
+        <Link to="/Support">
           test
           <br />
         </Link>
