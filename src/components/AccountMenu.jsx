@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../firebase.js'
@@ -103,6 +103,19 @@ const isValidEmail = (email) => {
 function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    useEffect(() => {
+        const labels = document.querySelectorAll('.label-holder .form-label');
+        labels.forEach(label => {
+            const newLetters = label.innerText
+                .split('')
+                .map((letter, idx) => {
+                    console.log(letter); // Log each letter before returning it wrapped in a span
+                    return `<span key=${idx}>${letter}</span>`; // Use a unique key for each span
+                })
+                .join('');
+            label.innerHTML = newLetters;
+        });
+    }, []);
 
     const handleSignIn = async (event) => {
         event.preventDefault();
@@ -169,8 +182,8 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
 
     return (
         <form>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
+            <div class="label-holder mb-3 mt-4">
+                <label for="email" class="form-label mt-">Email</label>
                 <input
                     type="email"
                     class="form-control"
@@ -182,7 +195,7 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
-            <div class="mb-3">
+            <div class="label-holder mb-3 mt-4">
                 <label for="password" class="form-label">Password</label>
                 <input 
                 type="password"
@@ -197,7 +210,7 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
             </div>
             
             <div className="d-flex flex-column justify-content-center">
-                <button type="submit" className="btn btn-success me-2" onClick={handleSignIn}>Submit</button>
+                <button type="submit" className="btn btn-success me-2 mt-4" onClick={handleSignIn}>Submit</button>
             </div>
             
             <div className="d-flex flex-column justify-content-center text-center">
