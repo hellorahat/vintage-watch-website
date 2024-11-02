@@ -1,5 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 import watch from '../assets/casio.jpg';
+import atcb from '../assets/addToCart.jpg';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -65,7 +66,7 @@ const Item = styled(Paper)(({ theme }) => ({
 function BasicGrid() {
     return (
       <Box sx={{ flexGrow: 1}}>
-        <Grid className="gridB" container spacing={2}>
+        <Grid className="gridB" container spacing={10}>
         <Grid size = {2}></Grid>
 
           <Grid size={4} className="itemPicBox">
@@ -77,7 +78,7 @@ function BasicGrid() {
                 Brand<br/>
                 Watch Name<br/>
                 $ XXX.XX<br/>
-                <Button variant="outlined" endIcon={<AddShoppingCartIcon />}>
+                <Button className="ATCButton" variant="outlined" endIcon={<AddShoppingCartIcon />}>
                 Add To Cart
                 </Button>
             </Item>

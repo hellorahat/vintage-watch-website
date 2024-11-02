@@ -1,0 +1,14 @@
+.banner{
+    height: 158px;
+    width:1500px;
+    
+}
+
+.bannerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.who{
+    text-align: center;
+}
