@@ -18,6 +18,7 @@ function MobileLayout() {
 function DesktopLayout() {
   return (
     <div>
+      <br/><br/>
       <h1 className="who">Who We Are</h1>
       <div className="who">
         Welcome to Vintage Watch Co., where time-honored craftsmanship meets
@@ -30,6 +31,7 @@ function DesktopLayout() {
       <div className="bannerBox">
         <img className="banner" src={Image} alt="img" />
       </div>
+      <br/><br/>
       <h1 className="who">Our Collection</h1>
       <div className="who">
         Our carefully curated collection features a diverse range of vintage
