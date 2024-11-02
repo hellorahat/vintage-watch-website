@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../firebase.js'
 import { useUser } from './UserContext.jsx';
 
@@ -222,8 +222,15 @@ function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) 
         }
     }
 
-    const handleResetPassword = async() => {
+    const handleResetPassword = async(event) => {
+        event.preventDefault();
 
+        try {
+            await sendPasswordResetEmail(auth, user.email);
+            showSuccessMessage("Password reset email sent!");
+        } catch(error) {
+            showErrorMessage(error.message);
+        }
     }
 
     return (
