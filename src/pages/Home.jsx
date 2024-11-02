@@ -1,28 +1,24 @@
 import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import watch1 from "../assets/carouselWatches/cartier.jpg";
 import watch2 from "../assets/carouselWatches/omega-watches-hero-1.jpg";
 import watch3 from "../assets/carouselWatches/john-torcasio-133Vq4tTpBQ-unsplash.jpg";
+import Accordion from "../components/Accordion.jsx";
+import Watch from "../components/Watch.jsx";
+import watchesData from "./watches.json";
 import "../styles/Carousel.css";
 import "../styles/Home.css";
 
 import { Link } from "react-router-dom";
 
 function Home() {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const [watches, setWatches] = useState([]);
 
-  return <>{isMobile ? <MobileLayout /> : <DesktopLayout />}</>;
-}
-
-function MobileLayout() {
-  return (
-    <div>
-      <h1>Mobile Home</h1>
-    </div>
-  );
-}
-
-function DesktopLayout() {
+  useEffect(() => {
+    const watchInstances = watchesData.map((item) => new Watch(item));
+    setWatches(watchInstances);
+  }, []);
   return (
     <>
       <div>
@@ -33,6 +29,9 @@ function DesktopLayout() {
         <Link to="/product">test2</Link>
       </div>
       <div className="home_container">
+        <div className="accordion">
+          <Accordion />
+        </div>
         <div className="carousel">
           <Carousel data-bs-theme="dark">
             <Carousel.Item>
