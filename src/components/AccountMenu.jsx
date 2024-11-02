@@ -22,19 +22,42 @@ function SignInForm() {
     const [password, setPassword] = useState('');
     const [error, setErrorMessage] = useState(null);
     const [successMessage, setSuccessMessage] = useState('');
-
+    const [fadeOutError, setFadeOutError] = useState(false);
+    const [fadeOutSuccess, setFadeOutSuccess] = useState(false);
     const { setUser } = useUser();
+
+    const showErrorMessage = (message) => {
+        setErrorMessage(message);
+        setFadeOutError(false);
+        setTimeout(() => {
+            setFadeOutError(true);
+            setTimeout(() => {
+                setErrorMessage('');
+            }, 500); // Wait for fade-out to complete before clearing
+        }, 3000);
+    };
+
+    const showSuccessMessage = (message) => {
+        setSuccessMessage(message);
+        setFadeOutSuccess(false);
+        setTimeout(() => {
+            setFadeOutSuccess(true);
+            setTimeout(() => {
+                setSuccessMessage('');
+            }, 500); // Wait for fade-out to complete before clearing
+        }, 3000);
+    };
 
     const handleSignIn = async (event) => {
         event.preventDefault();
         resetMessages();
 
         if (!isValidEmail(email)) {
-            setErrorMessage("Please enter a valid email address.");
+            showErrorMessage("Please enter a valid email address.");
             return;
         }
         if (password.trim() === '') {
-            setErrorMessage("Password cannot be empty.");
+            showErrorMessage("Password cannot be empty.");
             return;
         }
 
@@ -47,14 +70,14 @@ function SignInForm() {
             }
             else {
                 setUser(user);
-                setSuccessMessage("Signed in successfully!");
+                showSuccessMessage("Signed in successfully!");
             }
         } catch (error) {
             if(error.code === "auth/invalid-credential") {
-                setErrorMessage("Invalid email or password")
+                showErrorMessage("Invalid email or password")
             }
             else {
-                setErrorMessage(error.message);
+                showErrorMessage(error.message);
             }
         }
     };
@@ -64,11 +87,11 @@ function SignInForm() {
         resetMessages();
 
         if (!isValidEmail(email)) {
-            setErrorMessage("Please enter a valid email address.");
+            showErrorMessage("Please enter a valid email address.");
             return;
         }
         if (password.trim() === '') {
-            setErrorMessage("Password cannot be empty.");
+            showErrorMessage("Password cannot be empty.");
             return;
         }
 
@@ -78,20 +101,20 @@ function SignInForm() {
 
             // Send verification email
             await sendEmailVerification(user);
-            setSuccessMessage("Verification email sent! Please check your inbox.");
+            showSuccessMessage("Verification email sent! Please check your inbox.");
         } catch (error) {
-            if(error.code === "auth/email-already-exists") {
-                setErrorMessage("The email address provided is already in use.");
+            if(error.code === "auth/email-already-in-use") {
+                showErrorMessage("The email address provided is already in use.");
             }
             else {
-                setErrorMessage(error.message)
+                showErrorMessage(error.message)
             }
         }
     };
 
     const resetMessages = () => {
-        setErrorMessage(null);
-        setSuccessMessage('');
+        setFadeOutError(false);
+        setFadeOutSuccess(false);
     };
 
     return (
@@ -133,8 +156,16 @@ function SignInForm() {
             </div>
 
             {/* alerts for error or success */}
-            {error && <div className="alert alert-danger mt-3">{error}</div>}
-            {successMessage && <div className="alert alert-success mt-3">{successMessage}</div>}
+            {error && (
+                <div className={`alert alert-danger mt-3 ${fadeOutError ? 'hidden' : ''}`}>
+                    {error}
+                </div>
+            )}
+            {successMessage && (
+                <div className={`alert alert-success mt-3 ${fadeOutSuccess ? 'hidden' : ''}`}>
+                    {successMessage}
+                </div>
+            )}
         </form>
     )
 }
