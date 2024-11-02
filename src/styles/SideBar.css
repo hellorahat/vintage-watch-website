@@ -54,3 +54,17 @@
 .arrow.down {
     transform: rotate(45deg);
 }
+
+
+.bubble {
+    display: inline-block;
+    width: 10px; 
+    height: 10px; 
+    border-radius: 50%;
+    margin-right: 5px; 
+    background-color: transparent; 
+}
+
+.bubble.selected {
+    background-color: #198754; 
+}
