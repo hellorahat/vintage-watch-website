@@ -12,6 +12,11 @@ function AccountMenu() {
     )
 }
 
+const isValidEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+};
+
 function SignInForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -23,6 +28,15 @@ function SignInForm() {
     const handleSignIn = async (event) => {
         event.preventDefault();
         resetMessages();
+
+        if (!isValidEmail(email)) {
+            setErrorMessage("Please enter a valid email address.");
+            return;
+        }
+        if (password.trim() === '') {
+            setErrorMessage("Password cannot be empty.");
+            return;
+        }
 
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
@@ -49,6 +63,15 @@ function SignInForm() {
         event.preventDefault();
         resetMessages();
 
+        if (!isValidEmail(email)) {
+            setErrorMessage("Please enter a valid email address.");
+            return;
+        }
+        if (password.trim() === '') {
+            setErrorMessage("Password cannot be empty.");
+            return;
+        }
+
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
@@ -61,7 +84,7 @@ function SignInForm() {
                 setErrorMessage("The email address provided is already in use.");
             }
             else {
-                setErrorMessage(error)
+                setErrorMessage(error.message)
             }
         }
     };
