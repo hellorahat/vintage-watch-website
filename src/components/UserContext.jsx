@@ -9,7 +9,12 @@ export const UserProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(currentUser => {
             if(!currentUser.emailVerified) return;
-            setUser(currentUser);
+
+            const name = currentUser.email.split('@')[0]; // Extracts the part before @
+            setUser({
+                ...currentUser,
+                name: name
+            });
         });
 
         return () => unsubscribe();

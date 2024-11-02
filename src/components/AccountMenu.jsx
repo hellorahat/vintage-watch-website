@@ -226,11 +226,32 @@ function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) 
         }
     }
 
+    const handleResetPassword = async() => {
+
+    }
+
     return (
         <>
-            <p>Hello, {user.email}!</p>
-            <div className="d-flex flex-column justify-content-center">
-                <button type="submit" className="btn btn-primary me-2" onClick={handleSignOut}>Sign Out</button>
+            <div className="upper-box">
+                <h5>Hello, {user.name}!</h5>
+            </div>
+
+            <div className="d-flex flex-column justify-content-center sign-in py-2">
+            <div>
+                <Link to="/order-history" className="links">
+                    <p>Order History</p>
+                </Link>
+                <Link to="/payment-methods" className="links">
+                    <p>Payment Methods</p>
+                </Link>
+                <Link to="/addresses" className="links">
+                    <p>Addresses</p>
+                </Link>
+                <span className="links mb-5" onClick={handleResetPassword} style={{ cursor: 'pointer' }}>
+                    Reset Password
+                </span>
+            </div>
+                <button type="submit" className="btn btn-primary me-2 mt-5" onClick={handleSignOut}>Sign Out</button>
             </div>
         </>
     )
