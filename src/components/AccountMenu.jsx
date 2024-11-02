@@ -104,8 +104,6 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const { setUser } = useUser();
-
     const handleSignIn = async (event) => {
         event.preventDefault();
         resetMessages();
@@ -127,7 +125,6 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 throw new Error("Please verify your email address before signing in.");
             }
             else {
-                setUser(user);
                 showSuccessMessage("Signed in successfully!");
             }
         } catch (error) {
@@ -200,26 +197,25 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
             </div>
             
             <div className="d-flex flex-column justify-content-center">
-                <button type="submit" className="btn btn-primary me-2" onClick={handleSignIn}>Submit</button>
+                <button type="submit" className="btn btn-success me-2" onClick={handleSignIn}>Submit</button>
             </div>
             
             <div className="d-flex flex-column justify-content-center text-center">
                 <p className="mt-4 mb-0 me-2">Don't have an account?</p>
-                <button type="create-account" className="btn btn-primary me-2" onClick={handleCreateAccount}>Create Account</button>
+                <button type="create-account" className="btn btn-success me-2" onClick={handleCreateAccount}>Create Account</button>
             </div>
         </form>
     )
 }
 
 function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) {
-    const { setUser, user } = useUser();
+    const { user } = useUser();
 
     const handleSignOut = async(event) => {
         event.preventDefault();
 
         try {
             await auth.signOut();
-            setUser(null);
             showSuccessMessage("Signed out successfully!");
         } catch(error) {
             showErrorMessage(error.message)
@@ -251,7 +247,7 @@ function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) 
                     Reset Password
                 </span>
             </div>
-                <button type="submit" className="btn btn-primary me-2 mt-5" onClick={handleSignOut}>Sign Out</button>
+                <button type="submit" className="btn btn-success me-2 mt-5" onClick={handleSignOut}>Sign Out</button>
             </div>
         </>
     )
