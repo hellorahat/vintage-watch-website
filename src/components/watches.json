@@ -1,0 +1,257 @@
+[
+    {
+    
+        "id": "1",
+            "type": "Men's Vintage",
+            "brand": "Cartier",
+            "model": "Santos",
+            "color": "Silver",
+            "release": "1980",
+            "diameter": 36,
+            "shape": "Square",
+            "image": "src/assets/watches/santos.jpg",
+            "price": "5000",
+            "DateAdded": "10-23-2024"
+        
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Cartier",
+        "model": "Tank",
+        "color": "Gold",
+        "release": "2022",
+        "diameter": 40,
+        "shape": "Rectangle",
+        "image": "cartier_tank.jpg"
+    },
+    {
+        "type": "Women's Vintage",
+        "brand": "Cartier",
+        "model": "Ballon Bleu",
+        "color": "Blue",
+        "release": "2005",
+        "diameter": 42,
+        "shape": "Round",
+        "image": "cartier_ballon.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Cartier",
+        "model": "Pasha",
+        "color": "Rose Gold",
+        "release": "2021",
+        "diameter": 44,
+        "shape": "Round",
+        "image": "cartier_pasha.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Cartier",
+        "model": "Panthère",
+        "color": "Silver",
+        "release": "1985",
+        "diameter": 45,
+        "shape": "Square",
+        "image": "cartier_panthere.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Omega",
+        "model": "Speedmaster",
+        "color": "Black",
+        "release": "1970",
+        "diameter": 42,
+        "shape": "Round",
+        "image": "omega_speedmaster.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Omega",
+        "model": "Seamaster",
+        "color": "Blue",
+        "release": "2020",
+        "diameter": 40,
+        "shape": "Round",
+        "image": "omega_seamaster.jpg"
+    },
+    {
+        "type": "Women's Vintage",
+        "brand": "Omega",
+        "model": "Constellation",
+        "color": "Gold",
+        "release": "1982",
+        "diameter": 36,
+        "shape": "Round",
+        "image": "omega_constellation.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Omega",
+        "model": "De Ville",
+        "color": "Silver",
+        "release": "2021",
+        "diameter": 44,
+        "shape": "Round",
+        "image": "omega_de_ville.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Omega",
+        "model": "Railmaster",
+        "color": "Black",
+        "release": "2022",
+        "diameter": 45,
+        "shape": "Round",
+        "image": "omega_railmaster.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Bulova",
+        "model": "Accutron",
+        "color": "Gold",
+        "release": "1965",
+        "diameter": 36,
+        "shape": "Round",
+        "image": "bulova_accutron.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Bulova",
+        "model": "Precisionist",
+        "color": "Black",
+        "release": "2022",
+        "diameter": 42,
+        "shape": "Round",
+        "image": "bulova_precisionist.jpg"
+    },
+    {
+        "type": "Women's Vintage",
+        "brand": "Bulova",
+        "model": "Marine Star",
+        "color": "Silver",
+        "release": "1987",
+        "diameter": 40,
+        "shape": "Round",
+        "image": "bulova_marine_star.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Bulova",
+        "model": "CURV",
+        "color": "Blue",
+        "release": "2019",
+        "diameter": 44,
+        "shape": "Curved",
+        "image": "bulova_curv.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Bulova",
+        "model": "Lunar Pilot",
+        "color": "Black",
+        "release": "1971",
+        "diameter": 45,
+        "shape": "Round",
+        "image": "bulova_lunar_pilot.jpg"
+    },
+    {
+        "type": "Women's Vintage",
+        "brand": "Baume & Mercier",
+        "model": "Clifton",
+        "color": "Silver",
+        "release": "1988",
+        "diameter": 40,
+        "shape": "Round",
+        "image": "baume_clifton.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Baume & Mercier",
+        "model": "Classima",
+        "color": "Gold",
+        "release": "1995",
+        "diameter": 36,
+        "shape": "Round",
+        "image": "baume_classima.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Baume & Mercier",
+        "model": "Hampton",
+        "color": "Silver",
+        "release": "2018",
+        "diameter": 42,
+        "shape": "Rectangle",
+        "image": "baume_hampton.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Baume & Mercier",
+        "model": "Capeland",
+        "color": "Black",
+        "release": "2016",
+        "diameter": 44,
+        "shape": "Round",
+        "image": "baume_capeland.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Baume & Mercier",
+        "model": "Riviera",
+        "color": "Blue",
+        "release": "2020",
+        "diameter": 45,
+        "shape": "Round",
+        "image": "baume_riviera.jpg"
+    },
+    {
+        "type": "Men's Vintage",
+        "brand": "Rolex",
+        "model": "Submariner",
+        "color": "Black",
+        "release": "1960",
+        "diameter": 40,
+        "shape": "Round",
+        "image": "rolex_submariner.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Rolex",
+        "model": "Daytona",
+        "color": "Silver",
+        "release": "2021",
+        "diameter": 42,
+        "shape": "Round",
+        "image": "rolex_daytona.jpg"
+    },
+    {
+        "type": "Women's Vintage",
+        "brand": "Rolex",
+        "model": "Datejust",
+        "color": "Gold",
+        "release": "1975",
+        "diameter": 36,
+        "shape": "Round",
+        "image": "rolex_datejust.jpg"
+    },
+    {
+        "type": "Women's Modern",
+        "brand": "Rolex",
+        "model": "Oyster Perpetual",
+        "color": "Blue",
+        "release": "2019",
+        "diameter": 44,
+        "shape": "Round",
+        "image": "rolex_oyster.jpg"
+    },
+    {
+        "type": "Men's Modern",
+        "brand": "Rolex",
+        "model": "GMT-Master II",
+        "color": "Black",
+        "release": "2022",
+        "diameter": 45,
+        "shape": "Round",
+        "image": "rolex_gmt.jpg"
+    }
+]
