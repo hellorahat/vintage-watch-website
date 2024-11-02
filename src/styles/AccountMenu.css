@@ -35,6 +35,6 @@
     transition: opacity 0.5s ease; /* Transition for fade effect */
 }
 
-.alert.hidden {
+.alert.fade-out {
     opacity: 0; /* Make it transparent for fade-out effect */
 }

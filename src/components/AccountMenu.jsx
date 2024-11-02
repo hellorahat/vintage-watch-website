@@ -8,32 +8,47 @@ import '../styles/AccountMenu.css'
 
 function AccountMenu() {
     const { user } = useUser();
-    const [error, setErrorMessage] = useState(null);
-    const [successMessage, setSuccessMessage] = useState('');
+    const [errors, setErrorMessages] = useState([]);
+    const [successMessages, setSuccessMessages] = useState([]);
     const [fadeOutError, setFadeOutError] = useState(false);
     const [fadeOutSuccess, setFadeOutSuccess] = useState(false);
 
     
     const showErrorMessage = (message) => {
-        setErrorMessage(message);
-        setFadeOutError(false);
+        const id = Date.now();
+        setErrorMessages((prevErrors) => [...prevErrors, { id, message, fadeOut: false }]);
+
         setTimeout(() => {
-            setFadeOutError(true);
+            setErrorMessages((prevErrors) =>
+                prevErrors.map((error) =>
+                    error.id === id ? { ...error, fadeOut: true } : error
+                )
+            );
             setTimeout(() => {
-                setErrorMessage('');
-            }, 500); // Wait for fade-out to complete before clearing
-        }, 3000);
+                setErrorMessages((prevErrors) => prevErrors.filter((error) => error.id !== id));
+            }, 500); // Time for fade-out animation to complete
+        }, 3000); // Duration before fade-out starts
     };
 
     const showSuccessMessage = (message) => {
-        setSuccessMessage(message);
-        setFadeOutSuccess(false);
+        const id = Date.now();
+        setSuccessMessages((prevMessages) => [
+            ...prevMessages,
+            { id, message, fadeOut: false },
+        ]);
+
         setTimeout(() => {
-            setFadeOutSuccess(true);
+            setSuccessMessages((prevMessages) =>
+                prevMessages.map((msg) =>
+                    msg.id === id ? { ...msg, fadeOut: true } : msg
+                )
+            );
             setTimeout(() => {
-                setSuccessMessage('');
-            }, 500); // Wait for fade-out to complete before clearing
-        }, 3000);
+                setSuccessMessages((prevMessages) =>
+                    prevMessages.filter((msg) => msg.id !== id)
+                );
+            }, 500); // Time for fade-out animation to complete
+        }, 3000); // Duration before fade-out starts
     };
 
     const resetMessages = () => {
@@ -48,26 +63,34 @@ function AccountMenu() {
                 <AccountSettings 
                     showErrorMessage={showErrorMessage}
                     showSuccessMessage={showSuccessMessage}
-                    resetMessages={resetMessages}  // Ensure this is included
+                    resetMessages={resetMessages}
                 />
             ) : (
                 <SignInForm 
                     showErrorMessage={showErrorMessage}
                     showSuccessMessage={showSuccessMessage}
-                    resetMessages={resetMessages}  // Ensure this is included
+                    resetMessages={resetMessages}
                 />
             )}
-            {/* alerts for error or success */}
-            {error && (
-                <div className={`alert alert-danger mt-3 ${fadeOutError ? 'hidden' : ''}`}>
-                    {error}
+            {/* Display error alerts */}
+            {errors.map(({ id, message, fadeOut }) => (
+                <div
+                    key={id}
+                    className={`alert alert-danger mt-3 ${fadeOut ? 'fade-out' : ''}`}
+                >
+                    {message}
                 </div>
-            )}
-            {successMessage && (
-                <div className={`alert alert-success mt-3 ${fadeOutSuccess ? 'hidden' : ''}`}>
-                    {successMessage}
+            ))}
+
+            {/* Display success alerts */}
+            {successMessages.map(({ id, message, fadeOut }) => (
+                <div
+                    key={id}
+                    className={`alert alert-success mt-3 ${fadeOut ? 'fade-out' : ''}`}
+                >
+                    {message}
                 </div>
-            )}
+            ))}
         </>
     )
 }
@@ -75,7 +98,7 @@ function AccountMenu() {
 const isValidEmail = (email) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
-};
+}
 
 function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
     const [email, setEmail] = useState('');
@@ -197,9 +220,9 @@ function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) 
         try {
             await auth.signOut();
             setUser(null);
-            console.log("Signed out Successfully!");
+            showSuccessMessage("Signed out successfully!");
         } catch(error) {
-            console.log(error.message);
+            showErrorMessage(error.message)
         }
     }
 
