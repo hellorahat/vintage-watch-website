@@ -7,8 +7,11 @@ import { useUser } from './UserContext.jsx';
 import '../styles/AccountMenu.css'
 
 function AccountMenu() {
+    const { user } = useUser();
     return (
-        <SignInForm />
+        <>
+            {user ? <AccountSettings /> : <SignInForm />}
+        </>
     )
 }
 
@@ -167,6 +170,13 @@ function SignInForm() {
                 </div>
             )}
         </form>
+    )
+}
+
+function AccountSettings() {
+    const { user } = useUser();
+    return (
+        <p>Hello, {user.email}!</p>
     )
 }
 
