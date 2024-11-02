@@ -42,7 +42,7 @@
   /* Height of the bottom bar */
   width: 100%;
   /* Full width */
-  background-color: grey;
+  background-color: lightgrey;
   /* Color of the bottom bar */
   position: absolute;
   bottom: -5px;
@@ -57,11 +57,11 @@
 /* Show the bottom bar when active or hovered */
 .redirectory .btn:hover::after {
   transform: scaleX(2);
-  background-color: #59ffac;
+  background-color: #198754;
 }
 
 .redirectory .btn.active::after {
-  background-color: #59ffac;
+  background-color: #198754;
   transform: scaleX(2);
   /* Show the bottom bar */
 }

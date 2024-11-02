@@ -38,19 +38,25 @@ function DesktopLayout() {
             <Carousel.Item>
               <img className="d-block w-100" src={watch1} alt="First slide" />
               <Carousel.Caption>
-                <Link to="/catalog">Cartier</Link>
+                <Link to="/catalog" className="watch-caption">
+                  Cartier
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={watch2} alt="Second slide" />
               <Carousel.Caption>
-                <Link to="/catalog">Omega</Link>
+                <Link to="/catalog" className="watch-caption">
+                  Omega
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img className="d-block w-100" src={watch3} alt="Third slide" />
               <Carousel.Caption>
-                <Link to="/catalog">Rolex</Link>
+                <Link to="/catalog" className="watch-caption">
+                  Rolex
+                </Link>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
