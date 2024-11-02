@@ -20,11 +20,7 @@
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "firebase": "^10.14.1",
-<<<<<<< HEAD
-    "prop-types": "^15.8.1",
-=======
     "openai": "^4.70.2",
->>>>>>> b4eecb1f2439c5ca7a5e26b8a0a068f6855d4c8f
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
