@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { doc, setDoc, collection } from "firebase/firestore";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
-
+import MyChatBot from './MyChatBot';
 function Home() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
@@ -123,6 +123,7 @@ function Home() {
             <p>No watches found for the selected date.</p>
           )}
         </div>
+      
       </div>
 
     </>
