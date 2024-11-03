@@ -5,6 +5,7 @@ import watchesData from '../components/watches.json'
 import '../styles/Catalog.css'
 import { firestore } from '../../firebase'
 import { doc, setDoc, collection } from 'firebase/firestore'
+import { loadAllImages, retrieveSource } from '../utility/retrieveSource.jsx'
 
 function Catalog() {
   const [watches, setWatches] = useState([])
@@ -14,7 +15,12 @@ function Catalog() {
     const watchInstances = watchesData.map((item) => new Watch(item))
     setWatches(watchInstances)
     setFilteredWatches(watchInstances)
+    const fetchImages = async () => {
+        await loadAllImages();
+    }
+    fetchImages();
   }, [])
+
   const addToFavorites = async (watch) => {
     try {
       const favoritesRef = doc(collection(firestore, 'favorites'), watch.id)
