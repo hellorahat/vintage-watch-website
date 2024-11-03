@@ -6,7 +6,7 @@ import '../styles/Catalog.css'
 import { firestore } from '../../firebase'
 import { doc, setDoc, collection } from 'firebase/firestore'
 import { loadAllImages, retrieveSource } from '../utility/retrieveSource.jsx'
-import.meta.glob('../assets/watches/**/*.{png,jpg,jpeg,svg}');
+// import { getImageURL } from '../utility/image-util.js'
 
 function Catalog() {
   const [watches, setWatches] = useState([])
@@ -70,8 +70,9 @@ function Catalog() {
         {filteredWatches.length > 0 ? (
           filteredWatches.map((watch) => (
             <div key={watch.id} className="watch-card">
+              {console.log(retrieveSource(watch.image))}
               <img className="watch-image" src={watch.image} alt={watch.model} />
-              <h3 className="watch-brand">{watch.brand}</h3>
+              <h3 className="watch-brand">{retrieveSource(watch.brand)}</h3>
               <h4>{watch.model}</h4>
               <p>Price: {watch.price}</p>
               <div
