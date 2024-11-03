@@ -81,6 +81,7 @@ function DesktopLayout() {
             </nav>
             <div className={`account-menu ${isAccountVisible ? 'active' : ''}`}>
                 {renderAccountMenu()}
+                
             </div>
             {/* <nav className="redirectory">
                 <div className="Rcontainer-fluid">
@@ -90,6 +91,7 @@ function DesktopLayout() {
                     <NavLink to="/contact-us" className="btn" activeClassName="active">Contact Us</NavLink>
                 </div>
             </nav> */}
+   
         </>
     )
 }
