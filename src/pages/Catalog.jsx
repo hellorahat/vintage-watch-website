@@ -3,15 +3,14 @@ import Sidebar from "../pages/Sidebar.jsx";
 import Watch from "../components/Watch.jsx";
 import watchesData from "../components/watches.json";
 import "../styles/Catalog.css";
-import { firestore } from "../../firebase";
-import { doc, setDoc, collection } from "firebase/firestore";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
-import { useFavorites } from "../utility/addToFavorites.jsx";
+import { useFavorites } from "../utility/FavoritesContext.jsx";
 
 function Catalog() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { addFavorite } = useFavorites();
 
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
@@ -23,21 +22,6 @@ function Catalog() {
     };
     fetchImages();
   }, []);
-
-  const addToFavorites = async (watch) => {
-    try {
-      const favoritesRef = doc(collection(firestore, "favorites"), watch.id);
-      await setDoc(favoritesRef, {
-        brand: watch.brand,
-        model: watch.model,
-        image: watch.image,
-        price: watch.price,
-      });
-      alert(`${watch.model} added to favorites!`);
-    } catch (error) {
-      console.error("Error adding to favorites:", error);
-    }
-  };
 
   const handleFilterChange = (selectedFilters) => {
     let filtered = watches;
@@ -101,7 +85,7 @@ function Catalog() {
               <h4 className="watch-price">${watch.price}</h4>
               <div
                 className="like-button"
-                onClick={() => addToFavorites(watch)}
+                onClick={() => addFavorite(watch)}
               >
                 <svg
                   width="25"

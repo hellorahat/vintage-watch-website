@@ -2,39 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import { Box, Stack, Typography, Button } from '@mui/material'
-import { firestore } from '../../firebase'
-import {
-  collection,
-  getDocs,
-  deleteDoc,
-  doc,
-} from 'firebase/firestore'
+import { useFavorites } from '../utility/FavoritesContext'
 
 const Favorites = () => {
-  const [favorites, setFavorites] = useState([])
-
-  const fetchFavorites = async () => {
-    const favoritesRef = collection(firestore, 'favorites')
-    const snapshot = await getDocs(favoritesRef)
-    const favoritesList = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }))
-    setFavorites(favoritesList)
-  }
-
-  useEffect(() => {
-    fetchFavorites()
-  }, [])
-
-  const removeFavorite = async (id) => {
-    await deleteDoc(doc(firestore, 'favorites', id))
-    fetchFavorites() 
-  }
+  const { favorites, removeFavorite } = useFavorites()
 
   const addToCart = () => {
     removeFavorite();
-    
   }
 
   return (
