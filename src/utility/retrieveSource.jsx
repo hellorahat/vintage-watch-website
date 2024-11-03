@@ -16,7 +16,6 @@ const loadAllImages = async () => {
             // console.log(`Loaded: ${newPath} -> ${imageSources[newPath]}`); // Log the loaded image source
         })
     );
-    console.log('All images loaded:', imageSources); // Log after all images are loaded
 };
 
 // Call this function to preload images once
