@@ -35,7 +35,7 @@ const Favorites = () => {
   return (
     <Box
       width="100vw"
-      height="100vh"
+      // height="100vh"
       display="flex"
       justifyContent="center"
       flexDirection="column"
@@ -53,15 +53,20 @@ const Favorites = () => {
             <Box
               key={id}
               display="flex"
+              height={225}
               justifyContent="space-between"
               alignItems="center"
-              bgcolor="#f9f9f9"
               border="1px solid #ddd"
               padding={3}
-              borderRadius={2}
+              paddingBottom={5.5}
+              backgroundColor="white"
+              borderTop={0}
+              borderLeft={0}
+              borderRight={0}
+              // borderRadius={2}
             >
               <Box display="flex" alignItems="center" gap={3}>
-                <img src={image} alt={model} width="100px" height="100px" style={{ borderRadius: '8px' }} />
+                <img src={image} alt={model} width="200px" height="200px" style={{ borderRadius: '10px' }} />
                 <Box>
                   <Typography variant="h5" color="#333">{brand}</Typography>
                   <Typography variant="subtitle1" color="#666">{model}</Typography>
