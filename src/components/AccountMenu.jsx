@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../firebase.js'
-import { useUser } from './UserContext.jsx';
+import { useUser } from '../utility/UserContext.jsx';
 
 import '../styles/AccountMenu.css'
 

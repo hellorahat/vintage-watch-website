@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AccountMenu from '../components/AccountMenu'
-import { UserProvider } from './UserContext';
+import { UserProvider } from '../utility/UserContext';
 import iconSearch from '../assets/search.svg'
 import iconAccount from '../assets/account.svg'
 import iconFavorite from '../assets/favorite.svg'
