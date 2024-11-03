@@ -121,7 +121,7 @@ function SideBar({ onFilterChange }) {
                         Shape <span className={`arrow ${openSection === 7 ? 'up' : 'down'}`}></span>
                     </button>
                     <div className={`dropdown ${openSection === 7 ? 'active' : ''}`}>
-                        {["Round", "Rectangular", "Square"].map(shape => (
+                        {["Round", "Curved", "Square"].map(shape => (
                             <p key={shape} onClick={(event) => handleFilterClick(event, 'shape', shape)} className={selectedFilters.shape.includes(shape) ? 'selected' : ''}>
                                 <span className={`bubble ${selectedFilters.shape.includes(shape) ? 'selected' : ''}`}></span>
                                 {shape}

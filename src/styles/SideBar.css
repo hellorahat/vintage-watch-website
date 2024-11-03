@@ -1,11 +1,11 @@
 .sidebar {
-  position: static;
+  
   left: 0;
   top: 100;
   height: auto;
-  width: 184px;
+  width: 300px;
   background-color: #faf9f9;
-  padding: 20px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
@@ -63,6 +63,7 @@
     border-radius: 50%;
     margin-right: 5px; 
     background-color: transparent; 
+
 }
 
 .bubble.selected {

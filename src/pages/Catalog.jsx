@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Sidebar from '../pages/Sidebar.jsx';
-import Watch from './Watch';
+import Watch from '../components/Watch.jsx';
 import watchesData from '../components/watches.json';
 import '../styles/Catalog.css';
 
@@ -13,7 +13,7 @@ function Catalog() {
         setWatches(watchInstances);
         setFilteredWatches(watchInstances); 
     }, []);
-}
+
     const handleFilterChange = (selectedFilters) => {
         let filtered = watches;
 
@@ -61,6 +61,6 @@ function Catalog() {
             </div>
     </div>
   );
-
+}
 
 export default Catalog;
