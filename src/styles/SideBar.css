@@ -1,9 +1,8 @@
 .sidebar {
-  margin-left: 30px;
   left: 0;
   top: 100;
   height: auto;
-  width: 300px;
+  width: 200px;
   background-color: #faf9f9;
   padding: 10px;
   margin-bottom: 20px;
@@ -26,6 +25,9 @@
   padding: 0;
   cursor: pointer;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: left;
   margin-bottom: 35px;
 }
@@ -56,17 +58,15 @@
   transform: rotate(45deg);
 }
 
-
 .bubble {
-    display: inline-block;
-    width: 10px; 
-    height: 10px; 
-    border-radius: 50%;
-    margin-right: 5px; 
-    background-color: transparent; 
-
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: transparent;
 }
 
 .bubble.selected {
-    background-color: #198754; 
+  background-color: #198754;
 }
