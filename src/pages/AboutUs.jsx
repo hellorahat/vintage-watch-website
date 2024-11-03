@@ -21,7 +21,9 @@ function MobileLayout() {
 function DesktopLayout() {
   return (
     <div>
+      <br/><br/>
       <h1 className="who">Who We Are</h1>
+      
       <div className="who">
         Welcome to Vintage Watch Co., where time-honored craftsmanship meets
         modern elegance. We are passionate collectors and enthusiasts of vintage
@@ -30,18 +32,13 @@ function DesktopLayout() {
         <br />
         <br />
       </div>
-      <div>
-        <BlurryImageLoader
-          src={newImage} // Use the imported image directly
-          alt="Vintage Watch" // Updated alt text
-        />
-      </div>
       <div className="bannerBox">
         <img className="banner" src={stats} alt="About Us Banner" />
       </div>
       <br />
       <br />
       <h1 className="who">Our Collection</h1>
+     
       <div className="who">
         Our carefully curated collection features a diverse range of vintage
         watches from renowned brands, each with its unique charm and character.
@@ -51,7 +48,14 @@ function DesktopLayout() {
       </div>
       <br />
       <br />
+      <div>
+        <BlurryImageLoader
+          src={newImage} // Use the imported image directly
+          alt="Vintage Watch" // Updated alt text
+        />
+      </div>
     </div>
+    
   );
 }
 
