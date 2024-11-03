@@ -13,7 +13,6 @@ const loadAllImages = async () => {
             const imageModule = await importImage();
             const newPath = path.replace('../', 'src/');
             imageSources[newPath] = imageModule.default // Store src in dictionary
-            console.log(`Loaded: ${newPath} -> ${imageSources[newPath]}`); // Log the loaded image source
         })
     );
     console.log('All images loaded:', imageSources); // Log after all images are loaded
@@ -24,7 +23,6 @@ loadAllImages();
 
 // Function to retrieve the source URL of an image based on path
 const retrieveSource = (path) => {
-    const adjustedPath = path.replace('src/', '/');
     return imageSources[path] || null; // Return the src if found, otherwise null
 };
 
