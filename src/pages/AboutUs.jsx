@@ -21,8 +21,6 @@ function MobileLayout() {
 function DesktopLayout() {
   return (
     <div>
-      <br />
-      <br />
       <h1 className="who">Who We Are</h1>
       <div className="who">
         Welcome to Vintage Watch Co., where time-honored craftsmanship meets
