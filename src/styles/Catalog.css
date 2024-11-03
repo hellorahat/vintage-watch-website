@@ -6,17 +6,19 @@
 }
 
 .watch-list {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(5, 200px);
     gap: 20px;
     padding: 5px;
-    width: calc(200px * 3 + 20px);
+    width: calc(200px * 5 + 20px);
     box-sizing: border-box;
     margin-left: 25px;
 }
 
 .watch-card {
     position: relative;
+    width: calc(200px * 1 + 20px);
     padding: 16px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
