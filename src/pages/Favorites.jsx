@@ -32,6 +32,11 @@ const Favorites = () => {
     fetchFavorites() 
   }
 
+  const addToCart = () => {
+    removeFavorite();
+    
+  }
+
   return (
     <Box
       width="100vw"
@@ -78,7 +83,7 @@ const Favorites = () => {
                     className="mb-3 outline-success"
                     variant="contained"
                     color="success"
-                    onClick={() => removeFavorite(id)}
+                    onClick={() => addToCart(id)}
                   >
                     Add to Cart
                 </Button>
