@@ -40,5 +40,5 @@
 .redirectory .btn:hover::after,
 .redirectory .btn.active::after {
   transform: scaleX(1);
-  background-color: #59ffac;
+  background-color: #1abb70;
 }
