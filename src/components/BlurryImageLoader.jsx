@@ -12,7 +12,7 @@ function BlurryImageLoader({ src, alt }) {
 
     img.onload = () => {
       setImgSrc(src); // Set the source to trigger re-render
-      const intervalDuration = 200; // 200 mili seconds
+      const intervalDuration = 2500; // 200 mili seconds
       const intervalStep = 100; // Total steps to reach 100%
       const intervalTime = intervalDuration / intervalStep; // Time for each increment
 
