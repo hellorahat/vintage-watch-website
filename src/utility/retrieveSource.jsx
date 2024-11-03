@@ -13,6 +13,7 @@ const loadAllImages = async () => {
             const imageModule = await importImage();
             const newPath = path.replace('../', 'src/');
             imageSources[newPath] = imageModule.default // Store src in dictionary
+            // console.log(`Loaded: ${newPath} -> ${imageSources[newPath]}`); // Log the loaded image source
         })
     );
     console.log('All images loaded:', imageSources); // Log after all images are loaded
