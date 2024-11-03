@@ -73,13 +73,23 @@ const Favorites = () => {
                   <Typography variant="subtitle2" color="#999">Price: {price}</Typography>
                 </Box>
               </Box>
-              <Button
-                variant="contained"
-                color="error"
-                onClick={() => removeFavorite(id)}
-              >
-                Remove from Favorites
-              </Button>
+              <div className="d-flex flex-column justify-content-center">
+                <Button
+                    className="mb-3 outline-success"
+                    variant="contained"
+                    color="success"
+                    onClick={() => removeFavorite(id)}
+                  >
+                    Add to Cart
+                </Button>
+                <Button
+                  variant="contained"
+                  color="error"
+                  onClick={() => removeFavorite(id)}
+                >
+                  Remove from Favorites
+                </Button>
+              </div>
             </Box>
           ))}
         </Stack>
