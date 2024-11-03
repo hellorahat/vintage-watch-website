@@ -6,7 +6,7 @@ function BlurryImageLoader({ src, alt }) {
   const [loadPercentage, setLoadPercentage] = useState(0);
 
   useEffect(() => {
-    const intervalDuration = 5000; // 5 seconds
+    const intervalDuration = 2500; // 2.5 seconds
     const intervalStep = 100; // Total steps to reach 100%
     const intervalTime = intervalDuration / intervalStep; // Time for each increment
 
