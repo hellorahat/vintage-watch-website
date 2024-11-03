@@ -5,7 +5,6 @@ import watch2 from "../assets/carouselWatches/omega-watches-hero-1.jpg";
 import watch3 from "../assets/carouselWatches/john-torcasio-133Vq4tTpBQ-unsplash.jpg";
 import Watch from "../components/Watch.jsx";
 import watchesData from "../components/watches.json";
-import "../styles/Carousel.css";
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
