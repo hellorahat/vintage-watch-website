@@ -1,14 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { Box, Stack, Typography, Button } from '@mui/material'
 import { useFavorites } from '../utility/FavoritesContext'
 
 const Favorites = () => {
   const { favorites, removeFavorite } = useFavorites()
 
-  const addToCart = () => {
-    removeFavorite();
+  const addToCart = (watch) => {
+    removeFavorite(watch);
   }
 
   return (
