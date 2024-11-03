@@ -71,8 +71,8 @@ function Catalog() {
           filteredWatches.map((watch) => (
             <div key={watch.id} className="watch-card">
               {console.log(retrieveSource(watch.image))}
-              <img className="watch-image" src={watch.image} alt={watch.model} />
-              <h3 className="watch-brand">{retrieveSource(watch.brand)}</h3>
+              <img className="watch-image" src={retrieveSource(watch.image)} alt={watch.model} />
+              <h3 className="watch-brand">{watch.brand}</h3>
               <h4>{watch.model}</h4>
               <p>Price: {watch.price}</p>
               <div
