@@ -11,9 +11,12 @@ const loadAllImages = async () => {
     await Promise.all(
         Object.entries(images).map(async ([path, importImage]) => {
             const imageModule = await importImage();
-            imageSources[path] = imageModule.default; // Store src in dictionary
+            const newPath = path.replace('/vintage-watch-website', '');
+            imageSources[newPath] = newPath; // Store src in dictionary
+            console.log(`Loaded: ${newPath} -> ${imageSources[newPath]}`); // Log the loaded image source
         })
     );
+    console.log('All images loaded:', imageSources); // Log after all images are loaded
 };
 
 // Call this function to preload images once
@@ -21,6 +24,7 @@ loadAllImages();
 
 // Function to retrieve the source URL of an image based on path
 const retrieveSource = (path) => {
+    console.log(imageSources[path]);
     return imageSources[path] || null; // Return the src if found, otherwise null
 };
 
