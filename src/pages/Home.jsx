@@ -78,6 +78,7 @@ function Home() {
             </Carousel.Item>
           </Carousel>
         </div>
+        <hr />
         <div className="watch-list">
           {filteredWatches.length > 0 ? (
             filteredWatches.map((watch) => (
