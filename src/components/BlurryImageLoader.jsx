@@ -47,7 +47,6 @@ function BlurryImageLoader({ src, alt }) {
       />
       {loading && (
         <div className="loading-container">
-          <div className="loading-text">{loadPercentage}%</div>
           <div className="bg" />
         </div>
       )}
