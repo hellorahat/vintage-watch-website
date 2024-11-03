@@ -19,7 +19,7 @@ const AlertProvider = ({ children }) => {
             setTimeout(() => {
                 setAlerts((previousAlerts) => previousAlerts.filter(alert => alert.id !== newAlert.id));
             }, 500);
-        }, 5000)
+        }, 2000)
     };
 
     return (

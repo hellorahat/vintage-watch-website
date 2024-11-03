@@ -8,8 +8,8 @@ const AlertComponent = () => {
     return (
         <div className="fixed-bottom container mt-3">
             <div className="mt-3">
-                {alerts.map((alert, index) => (
-                    <div key={index} className={`main-alert alert alert-success fade show ${alert.fadeOut ? 'fade-out' : ''}`} role="alert">
+                {alerts.map((alert) => (
+                    <div key={alert.id} className={`main-alert alert alert-success fade show ${alert.fadeOut ? 'fade-out' : ''}`} role="alert">
                         {alert.message}
                     </div>
                 ))}
