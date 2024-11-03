@@ -5,12 +5,14 @@ import watchesData from "../components/watches.json";
 import "../styles/Catalog.css";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 import { useFavorites } from "../utility/FavoritesContext.jsx";
+import { useAlerts } from "../utility/AlertContext.jsx";
 
 function Catalog() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
   const { addFavorite } = useFavorites();
+  const { addAlert } = useAlerts();
 
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
@@ -74,7 +76,6 @@ function Catalog() {
         {filteredWatches.length > 0 ? (
           filteredWatches.map((watch) => (
             <div key={watch.id} className="watch-card">
-              {console.log(retrieveSource(watch.image))}
               <img
                 className="watch-image"
                 src={retrieveSource(watch.image)}
@@ -85,7 +86,10 @@ function Catalog() {
               <h4 className="watch-price">${watch.price}</h4>
               <div
                 className="like-button"
-                onClick={() => addFavorite(watch)}
+                onClick={() => {
+                  addAlert("Added to Favorites!")
+                  addFavorite(watch)
+                }}
               >
                 <svg
                   width="25"
