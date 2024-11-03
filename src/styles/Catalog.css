@@ -25,6 +25,7 @@
     border-radius: 8px;
     overflow: hidden;
     height: 380px;
+    
 }
 
 .watch-button {
@@ -53,8 +54,10 @@
 
 .watch-image {
     width: 100%;
-    height: auto;
+    height: 180px;
     margin-bottom: 15px;
+    object-fit: cover;
+    
 }
 
 .watch-details h3 {

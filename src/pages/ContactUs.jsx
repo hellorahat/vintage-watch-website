@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid2';
+import BlurryImageLoader from "../components/BlurryImageLoader";
 function ContactUs() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
