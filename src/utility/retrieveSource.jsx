@@ -12,9 +12,7 @@ const loadAllImages = async () => {
         Object.entries(images).map(async ([path, importImage]) => {
             const imageModule = await importImage();
             const newPath = path.replace('../', 'src/');
-            const imageName = path.split('/').pop();
-            const targetPath = `dist/assets/${imageName}`;
-            imageSources[newPath] = targetPath // Store src in dictionary
+            imageSources[newPath] = imageModule.default // Store src in dictionary
             console.log(`Loaded: ${newPath} -> ${imageSources[newPath]}`); // Log the loaded image source
         })
     );
