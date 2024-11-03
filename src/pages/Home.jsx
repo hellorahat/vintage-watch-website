@@ -10,7 +10,7 @@ import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { doc, setDoc, collection } from "firebase/firestore";
-import { retrieveSource } from "../utility/retrieveSource.jsx";
+import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 
 function Home() {
   const [watches, setWatches] = useState([]);
@@ -26,6 +26,11 @@ function Home() {
       (watch) => watch.DateAdded === targetDate
     );
     setFilteredWatches(filteredWatches);
+
+    const fetchImages = async () => {
+      await loadAllImages();
+    }
+    fetchImages();
   }, []);
 
   const addToFavorites = async (watch) => {
@@ -34,7 +39,7 @@ function Home() {
       await setDoc(favoritesRef, {
         brand: watch.brand,
         model: watch.model,
-        image: watch.image,
+        image: retrieveSource(watch.image),
         price: watch.price,
       });
       alert(`${watch.model} added to favorites!`);
@@ -80,7 +85,7 @@ function Home() {
               <div key={watch.id} className="watch-card">
                 <img
                   className="watch-image"
-                  src={watch.image}
+                  src={retrieveSource(watch.image)}
                   alt={watch.model}
                 />
                 <h3 className="watch-brand">{watch.brand}</h3>
