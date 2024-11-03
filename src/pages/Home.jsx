@@ -4,7 +4,6 @@ import Carousel from "react-bootstrap/Carousel";
 import watch1 from "../assets/carouselWatches/cartier.jpg";
 import watch2 from "../assets/carouselWatches/omega-watches-hero-1.jpg";
 import watch3 from "../assets/carouselWatches/john-torcasio-133Vq4tTpBQ-unsplash.jpg";
-import Accordion from "../components/Accordion.jsx";
 import Watch from "../components/Watch.jsx";
 import watchesData from "../components/watches.json";
 import "../styles/Carousel.css";
@@ -29,9 +28,6 @@ function Home() {
         <Link to="/product">test2</Link>
       </div>
       <div className="home_container">
-        <div className="accordion">
-          <Accordion />
-        </div>
         <div className="carousel">
           <Carousel data-bs-theme="dark">
             <Carousel.Item>
