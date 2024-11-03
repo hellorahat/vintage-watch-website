@@ -6,10 +6,12 @@ import "../styles/Catalog.css";
 import { firestore } from "../../firebase";
 import { doc, setDoc, collection } from "firebase/firestore";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
+import { useFavorites } from "../utility/addToFavorites.jsx";
 
 function Catalog() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
@@ -17,6 +19,7 @@ function Catalog() {
     setFilteredWatches(watchInstances);
     const fetchImages = async () => {
       await loadAllImages();
+      setLoading(false);
     };
     fetchImages();
   }, []);
@@ -75,6 +78,10 @@ function Catalog() {
     }
     setFilteredWatches(filtered);
   };
+
+  if(loading) {
+    return <div>Loading...</div>
+  }
 
   return (
     <div className="catalog-container">

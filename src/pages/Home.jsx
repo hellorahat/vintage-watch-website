@@ -14,6 +14,7 @@ import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 function Home() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
+  const [loading, setLoading] = useState(true);
   const targetDate = "2024-11-03"; // Hard-coded date
 
   useEffect(() => {
@@ -28,6 +29,7 @@ function Home() {
 
     const fetchImages = async () => {
       await loadAllImages();
+      setLoading(false);
     };
     fetchImages();
   }, []);
@@ -47,6 +49,10 @@ function Home() {
     }
   };
 
+  if(loading) {
+    return <div>Loading...</div>
+  }
+  
   return (
     <>
       <div className="home_container">
