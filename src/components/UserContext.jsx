@@ -1,32 +1,37 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { auth } from '../../firebase.js'
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { auth } from "../../firebase.js";
 
 const UserContext = createContext(null);
 
 export const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null);
 
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(currentUser => {
-            if(!currentUser.emailVerified) return;
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      if (!currentUser) {
+        setUser(null);
+        return;
+      }
 
-            const name = currentUser.email.split('@')[0]; // Extracts the part before @
-            setUser({
-                ...currentUser,
-                name: name
-            });
-        });
+      if (!currentUser.emailVerified) return;
 
-        return () => unsubscribe();
-    }, []);
+      const name = currentUser.email.split("@")[0]; // Extracts the part before @
+      setUser({
+        ...currentUser,
+        name: name,
+      });
+    });
 
-    return (
-        <UserContext.Provider value={{user, setUser}}>
-            {children}
-        </UserContext.Provider>
-    );
+    return () => unsubscribe();
+  }, []);
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
 };
 
 export const useUser = () => {
-    return useContext(UserContext);
+  return useContext(UserContext);
 };

@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../../firebase.js'
 import { useUser } from './UserContext.jsx';
 
@@ -103,8 +103,19 @@ const isValidEmail = (email) => {
 function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-    const { setUser } = useUser();
+    useEffect(() => {
+        const labels = document.querySelectorAll('.label-holder .form-label');
+        labels.forEach(label => {
+            const newLetters = label.innerText
+                .split('')
+                .map((letter, idx) => {
+                    console.log(letter); // Log each letter before returning it wrapped in a span
+                    return `<span key=${idx}>${letter}</span>`; // Use a unique key for each span
+                })
+                .join('');
+            label.innerHTML = newLetters;
+        });
+    }, []);
 
     const handleSignIn = async (event) => {
         event.preventDefault();
@@ -127,7 +138,6 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 throw new Error("Please verify your email address before signing in.");
             }
             else {
-                setUser(user);
                 showSuccessMessage("Signed in successfully!");
             }
         } catch (error) {
@@ -172,8 +182,8 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
 
     return (
         <form>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
+            <div class="label-holder mb-3 mt-4">
+                <label for="email" class="form-label mt-">Email</label>
                 <input
                     type="email"
                     class="form-control"
@@ -185,7 +195,7 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
-            <div class="mb-3">
+            <div class="label-holder mb-3 mt-4">
                 <label for="password" class="form-label">Password</label>
                 <input 
                 type="password"
@@ -200,34 +210,40 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
             </div>
             
             <div className="d-flex flex-column justify-content-center">
-                <button type="submit" className="btn btn-primary me-2" onClick={handleSignIn}>Submit</button>
+                <button type="submit" className="btn btn-success me-2 mt-4" onClick={handleSignIn}>Submit</button>
             </div>
             
             <div className="d-flex flex-column justify-content-center text-center">
                 <p className="mt-4 mb-0 me-2">Don't have an account?</p>
-                <button type="create-account" className="btn btn-primary me-2" onClick={handleCreateAccount}>Create Account</button>
+                <button type="create-account" className="btn btn-success me-2" onClick={handleCreateAccount}>Create Account</button>
             </div>
         </form>
     )
 }
 
 function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) {
-    const { setUser, user } = useUser();
+    const { user } = useUser();
 
     const handleSignOut = async(event) => {
         event.preventDefault();
 
         try {
             await auth.signOut();
-            setUser(null);
             showSuccessMessage("Signed out successfully!");
         } catch(error) {
             showErrorMessage(error.message)
         }
     }
 
-    const handleResetPassword = async() => {
+    const handleResetPassword = async(event) => {
+        event.preventDefault();
 
+        try {
+            await sendPasswordResetEmail(auth, user.email);
+            showSuccessMessage("Password reset email sent!");
+        } catch(error) {
+            showErrorMessage(error.message);
+        }
     }
 
     return (
@@ -251,7 +267,7 @@ function AccountSettings({showErrorMessage, showSuccessMessage, resetMessages}) 
                     Reset Password
                 </span>
             </div>
-                <button type="submit" className="btn btn-primary me-2 mt-5" onClick={handleSignOut}>Sign Out</button>
+                <button type="submit" className="btn btn-success me-2 mt-5" onClick={handleSignOut}>Sign Out</button>
             </div>
         </>
     )

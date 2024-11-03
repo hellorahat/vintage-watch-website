@@ -13,7 +13,7 @@ function Catalog() {
         setWatches(watchInstances);
         setFilteredWatches(watchInstances); 
     }, []);
-
+}
     const handleFilterChange = (selectedFilters) => {
         let filtered = watches;
 
@@ -59,8 +59,8 @@ function Catalog() {
                     <p>No watches found with the selected filters.</p>
                 )}
             </div>
-        </div>
-    );
-}
+    </div>
+  );
+
 
 export default Catalog;

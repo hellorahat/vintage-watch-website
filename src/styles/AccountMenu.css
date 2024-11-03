@@ -1,3 +1,27 @@
+.label-holder {
+    position: relative;
+}
+
+.label-holder .form-label {
+    position:absolute;
+    left: 13px;
+    top: 6px;
+}
+
+.label-holder .form-label span {
+    display: inline-block;
+    min-width: 5px;
+}
+
+.label-holder input:focus + .form-label span,
+.label-holder input:valid + .form-label span {
+    color:lightblue
+}
+
+/* .form-control:focus + .form-label span {
+    color:red;
+} */
+
 .account-menu {
     position: fixed;
     padding-left: 1em;
