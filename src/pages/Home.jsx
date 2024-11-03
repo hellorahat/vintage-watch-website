@@ -29,7 +29,7 @@ function Home() {
 
     const fetchImages = async () => {
       await loadAllImages();
-    }
+    };
     fetchImages();
   }, []);
 
