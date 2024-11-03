@@ -20,7 +20,7 @@
     "color": "Gold",
     "release": "2022",
     "diameter": 40,
-    "shape": "Rectangle",
+    "shape": "Round",
     "image": "src/assets/watches/2/tank.jpg",
     "price": "7500",
     "DateAdded": "2024-10-23"
@@ -33,7 +33,7 @@
     "color": "Blue",
     "release": "2005",
     "diameter": 42,
-    "shape": "Round",
+    "shape": "Sqaure",
     "image": "src/assets/watches/3/bleu.jpg",
     "price": "6800",
     "DateAdded": "2024-10-23"
@@ -176,7 +176,7 @@
     "color": "Blue",
     "release": "2019",
     "diameter": 44,
-    "shape": "Curved",
+    "shape": "Round",
     "image": "src/assets/watches/14/curv.jpg",
     "price": "2400",
     "DateAdded": "2024-10-23"
@@ -228,7 +228,7 @@
     "color": "Silver",
     "release": "2018",
     "diameter": 42,
-    "shape": "Rectangle",
+    "shape": "Round",
     "image": "src/assets/watches/18/hampton.jpg",
     "price": "2300",
     "DateAdded": "2024-10-23"
@@ -307,7 +307,7 @@
     "color": "Gold",
     "release": "2021",
     "diameter": 36,
-    "shape": "Round",
+    "shape": "Sqaure",
     "image": "src/assets/watches/24/lady_datejust.jpg",
     "price": "8500",
     "DateAdded": "2024-10-23"
@@ -372,7 +372,7 @@
     "color": "Silver",
     "release": "2019",
     "diameter": 26,
-    "shape": "Rectangle",
+    "shape": "Square",
     "image": "src/assets/watches/29/dolcevita.jpg",
     "price": "1200",
     "DateAdded": "2024-10-23"
@@ -424,7 +424,7 @@
     "color": "White",
     "release": "2021",
     "diameter": 38,
-    "shape": "Curved",
+    "shape": "Round",
     "image": "src/assets/watches/33/twave.jpg",
     "price": "950",
     "DateAdded": "2024-10-23"
@@ -502,7 +502,7 @@
     "color": "Black",
     "release": "2023",
     "diameter": 38,
-    "shape": "Curved",
+    "shape": "Round",
     "image": "src/assets/watches/39/ventura.jpg",
     "price": "950",
     "DateAdded": "2024-11-03"
@@ -568,7 +568,7 @@
     "color": "Gold",
     "release": "2010",
     "diameter": 30,
-    "shape": "Curved",
+    "shape": "Round",
     "image": "src/assets/watches/44/serpenti.jpg",
     "price": "3500",
     "DateAdded": "2024-11-03"
