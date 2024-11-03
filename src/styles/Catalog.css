@@ -15,14 +15,35 @@
 }
 
 .watch-card {
-    background-color:#f8f8f8;
-    border: 1px solid #ddd;
+    position: relative;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    height:400px;
     overflow: hidden;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.2s ease;
+    height: 380px;
+}
+
+.watch-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.heart-button {
+    position: absolute;
+    bottom: 16px;
+    left: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    
+    
 }
 
 .watch-card:hover {

@@ -33,7 +33,7 @@ function Home() {
             <Carousel.Item>
               <img className="d-block w-100" src={watch1} alt="First slide" />
               <Carousel.Caption>
-                <Link to="/catalog" className="watch-caption">
+                <Link to="filtered = filtered.ca(watch => selectedFilters.model.includes(watch.model))" className="watch-caption">
                   Cartier
                 </Link>
               </Carousel.Caption>
