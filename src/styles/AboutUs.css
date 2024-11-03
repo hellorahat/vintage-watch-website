@@ -1,17 +1,19 @@
-.banner{
-    height: 158px;
-    width:1500px;
-    
+/* AboutUs.css */
+.banner {
+  height: 158px; /* Fixed height for the banner */
+  width: 100%; /* Set to 100% for responsiveness */
+  max-width: 1500px; /* Maximum width to prevent it from stretching too much */
 }
 
-.bannerBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-.who{
-    text-align: center;
-    padding-left: 220px;
-    padding-right: 220px;
+.bannerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adds some space below the banner */
 }
 
+.who {
+  text-align: center;
+  padding-left: 20px; /* Adjusted padding for smaller screens */
+  padding-right: 20px; /* Adjusted padding for smaller screens */
+}
