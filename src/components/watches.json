@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": "1",
     "type": "Men's Vintage",
     "brand": "Cartier",
@@ -10,9 +10,9 @@
     "shape": "Square",
     "image": "src/assets/watches/1/santos.jpg",
     "price": "5000",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "2",
     "type": "Men's Modern",
     "brand": "Cartier",
@@ -23,9 +23,9 @@
     "shape": "Rectangle",
     "image": "src/assets/watches/2/tank.jpg",
     "price": "7500",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "3",
     "type": "Women's Vintage",
     "brand": "Cartier",
@@ -36,9 +36,9 @@
     "shape": "Round",
     "image": "src/assets/watches/3/bleu.jpg",
     "price": "6800",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "4",
     "type": "Women's Modern",
     "brand": "Cartier",
@@ -49,9 +49,9 @@
     "shape": "Round",
     "image": "src/assets/watches/4/pasha.jpg",
     "price": "8900",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-11-03"
+  },
+  {
     "id": "5",
     "type": "Men's Vintage",
     "brand": "Cartier",
@@ -62,9 +62,9 @@
     "shape": "Square",
     "image": "src/assets/watches/5/panthere.jpg",
     "price": "6200",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "6",
     "type": "Men's Vintage",
     "brand": "Omega",
@@ -75,9 +75,9 @@
     "shape": "Round",
     "image": "src/assets/watches/6/speedmaster.jpg",
     "price": "4600",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "7",
     "type": "Men's Modern",
     "brand": "Omega",
@@ -88,9 +88,9 @@
     "shape": "Round",
     "image": "src/assets/watches/7/seamaster.jpg",
     "price": "5200",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "8",
     "type": "Women's Vintage",
     "brand": "Omega",
@@ -101,9 +101,9 @@
     "shape": "Round",
     "image": "src/assets/watches/8/constellation.jpg",
     "price": "3400",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "9",
     "type": "Women's Modern",
     "brand": "Omega",
@@ -114,9 +114,9 @@
     "shape": "Round",
     "image": "src/assets/watches/9/deville.jpg",
     "price": "4000",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "10",
     "type": "Men's Modern",
     "brand": "Omega",
@@ -127,9 +127,9 @@
     "shape": "Round",
     "image": "src/assets/watches/10/railmaster.jpg",
     "price": "3900",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-11-03"
+  },
+  {
     "id": "11",
     "type": "Men's Vintage",
     "brand": "Bulova",
@@ -140,9 +140,9 @@
     "shape": "Round",
     "image": "src/assets/watches/11/accutron.jpg",
     "price": "1500",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "12",
     "type": "Men's Modern",
     "brand": "Bulova",
@@ -153,9 +153,9 @@
     "shape": "Round",
     "image": "src/assets/watches/12/precisionist.jpg",
     "price": "1800",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-11-03"
+  },
+  {
     "id": "13",
     "type": "Women's Vintage",
     "brand": "Bulova",
@@ -166,9 +166,9 @@
     "shape": "Round",
     "image": "src/assets/watches/13/marine_star.jpg",
     "price": "1200",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "14",
     "type": "Women's Modern",
     "brand": "Bulova",
@@ -179,9 +179,9 @@
     "shape": "Curved",
     "image": "src/assets/watches/14/curv.jpg",
     "price": "2400",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "15",
     "type": "Men's Vintage",
     "brand": "Bulova",
@@ -192,9 +192,9 @@
     "shape": "Round",
     "image": "src/assets/watches/15/lunar_pilot.jpg",
     "price": "1600",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "16",
     "type": "Women's Vintage",
     "brand": "Bulova",
@@ -205,9 +205,9 @@
     "shape": "Round",
     "image": "src/assets/watches/16/clifton.jpg",
     "price": "1900",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-11-03"
+  },
+  {
     "id": "17",
     "type": "Men's Vintage",
     "brand": "Cartier",
@@ -218,9 +218,9 @@
     "shape": "Round",
     "image": "src/assets/watches/17/classima.jpg",
     "price": "2100",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "18",
     "type": "Women's Modern",
     "brand": "Cartier",
@@ -231,9 +231,9 @@
     "shape": "Rectangle",
     "image": "src/assets/watches/18/hampton.jpg",
     "price": "2300",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "19",
     "type": "Women's Modern",
     "brand": "Cartier",
@@ -244,9 +244,9 @@
     "shape": "Round",
     "image": "src/assets/watches/19/capeland.jpg",
     "price": "2600",
-    "DateAdded": "10-23-2024"
-    },
-    {
+    "DateAdded": "2024-10-23"
+  },
+  {
     "id": "20",
     "type": "Men's Modern",
     "brand": "Cartier",
@@ -257,322 +257,320 @@
     "shape": "Round",
     "image": "src/assets/watches/20/riviera.jpg",
     "price": "3000",
-    "DateAdded": "10-23-2024"
-    },
+    "DateAdded": "2024-11-03"
+  },
 
+  {
+    "id": "21",
+    "type": "Men's Vintage",
+    "brand": "Rolex",
+    "model": "Datejust",
+    "color": "Gold",
+    "release": "1975",
+    "diameter": 40,
+    "shape": "Round",
+    "image": "src/assets/watches/21/datejust.jpg",
+    "price": "6000",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "22",
+    "type": "Men's Modern",
+    "brand": "Rolex",
+    "model": "Submariner",
+    "color": "Black",
+    "release": "2019",
+    "diameter": 42,
+    "shape": "Round",
+    "image": "src/assets/watches/22/submariner.jpg",
+    "price": "8200",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "23",
+    "type": "Women's Vintage",
+    "brand": "Rolex",
+    "model": "Oyster Perpetual",
+    "color": "Silver",
+    "release": "1990",
+    "diameter": 38,
+    "shape": "Round",
+    "image": "src/assets/watches/23/oyster.jpg",
+    "price": "7400",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "24",
+    "type": "Women's Modern",
+    "brand": "Rolex",
+    "model": "Lady-Datejust",
+    "color": "Gold",
+    "release": "2021",
+    "diameter": 36,
+    "shape": "Round",
+    "image": "src/assets/watches/24/lady_datejust.jpg",
+    "price": "8500",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "25",
+    "type": "Men's Vintage",
+    "brand": "Mercier",
+    "model": "Explorer",
+    "color": "Black",
+    "release": "1982",
+    "diameter": 45,
+    "shape": "Round",
+    "image": "src/assets/watches/25/explorer.jpg",
+    "price": "7800",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "26",
+    "type": "Men's Vintage",
+    "brand": "Rolex",
+    "model": "Monaco",
+    "color": "Black",
+    "release": "1971",
+    "diameter": 38,
+    "shape": "Square",
+    "image": "src/assets/watches/26/monaco.jpg",
+    "price": "4200",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "27",
+    "type": "Men's Modern",
+    "brand": "Mercier",
+    "model": "Carrera",
+    "color": "Silver",
+    "release": "2023",
+    "diameter": 41,
+    "shape": "Round",
+    "image": "src/assets/watches/27/carrera.jpg",
+    "price": "3000",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "28",
+    "type": "Women's Vintage",
+    "brand": "Rolex",
+    "model": "Collection",
+    "color": "Rose Gold",
+    "release": "2000",
+    "diameter": 36,
+    "shape": "Round",
+    "image": "src/assets/watches/28/master.jpg",
+    "price": "2500",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "29",
+    "type": "Women's Modern",
+    "brand": "Omega",
+    "model": "DolceVita",
+    "color": "Silver",
+    "release": "2019",
+    "diameter": 26,
+    "shape": "Rectangle",
+    "image": "src/assets/watches/29/dolcevita.jpg",
+    "price": "1200",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "30",
+    "type": "Men's Vintage",
+    "brand": "Mercier",
+    "model": "Diver's 6309",
+    "color": "Black",
+    "release": "1978",
+    "diameter": 42,
+    "shape": "Round",
+    "image": "src/assets/watches/30/divers.jpg",
+    "price": "800",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "31",
+    "type": "Men's Modern",
+    "brand": "Rolex",
+    "model": "Prospex",
+    "color": "Blue",
+    "release": "2022",
+    "diameter": 43,
+    "shape": "Round",
+    "image": "src/assets/watches/31/prospex.jpg",
+    "price": "1500",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "32",
+    "type": "Women's Vintage",
+    "brand": "Rolex",
+    "model": "Lady Heart",
+    "color": "Silver",
+    "release": "1995",
+    "diameter": 32,
+    "shape": "Round",
+    "image": "src/assets/watches/32/lady_heart.jpg",
+    "price": "1000",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "33",
+    "type": "Women's Modern",
+    "brand": "Rolex",
+    "model": "T-Wave",
+    "color": "White",
+    "release": "2021",
+    "diameter": 38,
+    "shape": "Curved",
+    "image": "src/assets/watches/33/twave.jpg",
+    "price": "950",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "34",
+    "type": "Men's Vintage",
+    "brand": "Rolex",
+    "model": "Chronograph",
+    "color": "Brown",
+    "release": "2001",
+    "diameter": 45,
+    "shape": "Round",
+    "image": "src/assets/watches/34/chronograph.jpg",
+    "price": "150",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "35",
+    "type": "Men's Modern",
+    "brand": "Rolex",
+    "model": "Hybrid HR",
+    "color": "Black",
+    "release": "2023",
+    "diameter": 44,
+    "shape": "Round",
+    "image": "src/assets/watches/35/hybrid_hr.jpg",
+    "price": "200",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "36",
+    "type": "Women's Vintage",
+    "brand": "Omega",
+    "model": "Eco-Drive",
+    "color": "Gold",
+    "release": "1990",
+    "diameter": 28,
+    "shape": "Round",
+    "image": "src/assets/watches/36/ecodrive.jpg",
+    "price": "300",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "37",
+    "type": "Women's Modern",
+    "brand": "Omega",
+    "model": "Bluetooth",
+    "color": "Rose Gold",
+    "release": "2022",
+    "diameter": 30,
+    "shape": "Round",
+    "image": "src/assets/watches/37/bluetooth.jpg",
+    "price": "450",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "38",
+    "type": "Men's Vintage",
+    "brand": "Omega",
+    "model": "Khaki Field",
+    "color": "Green",
+    "release": "2010",
+    "diameter": 42,
+    "shape": "Round",
+    "image": "src/assets/watches/38/khaki_field.jpg",
+    "price": "600",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "39",
+    "type": "Men's Modern",
+    "brand": "Omega",
+    "model": "Ventura",
+    "color": "Black",
+    "release": "2023",
+    "diameter": 38,
+    "shape": "Curved",
+    "image": "src/assets/watches/39/ventura.jpg",
+    "price": "950",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "40",
+    "type": "Women's Vintage",
+    "brand": "Mercier",
+    "model": "Museum Classic",
+    "color": "Silver",
+    "release": "1985",
+    "diameter": 36,
+    "shape": "Round",
+    "image": "src/assets/watches/40/museum.jpg",
+    "price": "850",
+    "DateAdded": "2024-10-23"
+  },
 
-    {
-        "id": "21",
-        "type": "Men's Vintage",
-        "brand": "Rolex",
-        "model": "Datejust",
-        "color": "Gold",
-        "release": "1975",
-        "diameter": 40,
-        "shape": "Round",
-        "image": "src/assets/watches/21/datejust.jpg",
-        "price": "6000",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "22",
-        "type": "Men's Modern",
-        "brand": "Rolex",
-        "model": "Submariner",
-        "color": "Black",
-        "release": "2019",
-        "diameter": 42,
-        "shape": "Round",
-        "image": "src/assets/watches/22/submariner.jpg",
-        "price": "8200",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "23",
-        "type": "Women's Vintage",
-        "brand": "Rolex",
-        "model": "Oyster Perpetual",
-        "color": "Silver",
-        "release": "1990",
-        "diameter": 38,
-        "shape": "Round",
-        "image": "src/assets/watches/23/oyster.jpg",
-        "price": "7400",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "24",
-        "type": "Women's Modern",
-        "brand": "Rolex",
-        "model": "Lady-Datejust",
-        "color": "Gold",
-        "release": "2021",
-        "diameter": 36,
-        "shape": "Round",
-        "image": "src/assets/watches/24/lady_datejust.jpg",
-        "price": "8500",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "25",
-        "type": "Men's Vintage",
-        "brand": "Mercier",
-        "model": "Explorer",
-        "color": "Black",
-        "release": "1982",
-        "diameter": 45,
-        "shape": "Round",
-        "image": "src/assets/watches/25/explorer.jpg",
-        "price": "7800",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "26",
-        "type": "Men's Vintage",
-        "brand": "Rolex",
-        "model": "Monaco",
-        "color": "Black",
-        "release": "1971",
-        "diameter": 38,
-        "shape": "Square",
-        "image": "src/assets/watches/26/monaco.jpg",
-        "price": "4200",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "27",
-        "type": "Men's Modern",
-        "brand": "Mercier",
-        "model": "Carrera",
-        "color": "Silver",
-        "release": "2023",
-        "diameter": 41,
-        "shape": "Round",
-        "image": "src/assets/watches/27/carrera.jpg",
-        "price": "3000",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "28",
-        "type": "Women's Vintage",
-        "brand": "Rolex",
-        "model": "Collection",
-        "color": "Rose Gold",
-        "release": "2000",
-        "diameter": 36,
-        "shape": "Round",
-        "image": "src/assets/watches/28/master.jpg",
-        "price": "2500",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "29",
-        "type": "Women's Modern",
-        "brand": "Omega",
-        "model": "DolceVita",
-        "color": "Silver",
-        "release": "2019",
-        "diameter": 26,
-        "shape": "Rectangle",
-        "image": "src/assets/watches/29/dolcevita.jpg",
-        "price": "1200",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "30",
-        "type": "Men's Vintage",
-        "brand": "Mercier",
-        "model": "Diver's 6309",
-        "color": "Black",
-        "release": "1978",
-        "diameter": 42,
-        "shape": "Round",
-        "image": "src/assets/watches/30/divers.jpg",
-        "price": "800",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "31",
-        "type": "Men's Modern",
-        "brand": "Rolex",
-        "model": "Prospex",
-        "color": "Blue",
-        "release": "2022",
-        "diameter": 43,
-        "shape": "Round",
-        "image": "src/assets/watches/31/prospex.jpg",
-        "price": "1500",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "32",
-        "type": "Women's Vintage",
-        "brand": "Rolex",
-        "model": "Lady Heart",
-        "color": "Silver",
-        "release": "1995",
-        "diameter": 32,
-        "shape": "Round",
-        "image": "src/assets/watches/32/lady_heart.jpg",
-        "price": "1000",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "33",
-        "type": "Women's Modern",
-        "brand": "Rolex",
-        "model": "T-Wave",
-        "color": "White",
-        "release": "2021",
-        "diameter": 38,
-        "shape": "Curved",
-        "image": "src/assets/watches/33/twave.jpg",
-        "price": "950",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "34",
-        "type": "Men's Vintage",
-        "brand": "Rolex",
-        "model": "Chronograph",
-        "color": "Brown",
-        "release": "2001",
-        "diameter": 45,
-        "shape": "Round",
-        "image": "src/assets/watches/34/chronograph.jpg",
-        "price": "150",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "35",
-        "type": "Men's Modern",
-        "brand": "Rolex",
-        "model": "Hybrid HR",
-        "color": "Black",
-        "release": "2023",
-        "diameter": 44,
-        "shape": "Round",
-        "image": "src/assets/watches/35/hybrid_hr.jpg",
-        "price": "200",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "36",
-        "type": "Women's Vintage",
-        "brand": "Omega",
-        "model": "Eco-Drive",
-        "color": "Gold",
-        "release": "1990",
-        "diameter": 28,
-        "shape": "Round",
-        "image": "src/assets/watches/36/ecodrive.jpg",
-        "price": "300",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "37",
-        "type": "Women's Modern",
-        "brand": "Omega",
-        "model": "Bluetooth",
-        "color": "Rose Gold",
-        "release": "2022",
-        "diameter": 30,
-        "shape": "Round",
-        "image": "src/assets/watches/37/bluetooth.jpg",
-        "price": "450",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "38",
-        "type": "Men's Vintage",
-        "brand": "Omega",
-        "model": "Khaki Field",
-        "color": "Green",
-        "release": "2010",
-        "diameter": 42,
-        "shape": "Round",
-        "image": "src/assets/watches/38/khaki_field.jpg",
-        "price": "600",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "39",
-        "type": "Men's Modern",
-        "brand": "Omega",
-        "model": "Ventura",
-        "color": "Black",
-        "release": "2023",
-        "diameter": 38,
-        "shape": "Curved",
-        "image": "src/assets/watches/39/ventura.jpg",
-        "price": "950",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "40",
-        "type": "Women's Vintage",
-        "brand": "Mercier",
-        "model": "Museum Classic",
-        "color": "Silver",
-        "release": "1985",
-        "diameter": 36,
-        "shape": "Round",
-        "image": "src/assets/watches/40/museum.jpg",
-        "price": "850",
-        "DateAdded": "10-23-2024"
-    },
-
-    {
-        "id": "41",
-        "type": "Women's Modern",
-        "brand": "Mercier",
-        "model": "Bold",
-        "color": "Black",
-        "release": "2021",
-        "diameter": 38,
-        "shape": "Round",
-        "image": "src/assets/watches/41/bold.jpg",
-        "price": "950",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "42",
-        "type": "Men's Vintage",
-        "brand": "Mercier",
-        "model": "Aquis",
-        "color": "Blue",
-        "release": "2015",
-        "diameter": 43,
-        "shape": "Round",
-        "image": "src/assets/watches/42/aquis.jpg",
-        "price": "2000",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "43",
-        "type": "Men's Modern",
-        "brand": "Mercier",
-        "model": "Big Crown",
-        "color": "Green",
-        "release": "2022",
-        "diameter": 40,
-        "shape": "Round",
-        "image": "src/assets/watches/43/big_crown.jpg",
-        "price": "2200",
-        "DateAdded": "10-23-2024"
-    },
-    {
-        "id": "44",
-        "type": "Women's Vintage",
-        "brand": "Mercier",
-        "model": "Serpenti",
-        "color": "Gold",
-        "release": "2010",
-        "diameter": 30,
-        "shape": "Curved",
-        "image": "src/assets/watches/44/serpenti.jpg",
-        "price": "3500",
-        "DateAdded": "10-23-2024"
-    }
-
+  {
+    "id": "41",
+    "type": "Women's Modern",
+    "brand": "Mercier",
+    "model": "Bold",
+    "color": "Black",
+    "release": "2021",
+    "diameter": 38,
+    "shape": "Round",
+    "image": "src/assets/watches/41/bold.jpg",
+    "price": "950",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "42",
+    "type": "Men's Vintage",
+    "brand": "Mercier",
+    "model": "Aquis",
+    "color": "Blue",
+    "release": "2015",
+    "diameter": 43,
+    "shape": "Round",
+    "image": "src/assets/watches/42/aquis.jpg",
+    "price": "2000",
+    "DateAdded": "2024-11-03"
+  },
+  {
+    "id": "43",
+    "type": "Men's Modern",
+    "brand": "Mercier",
+    "model": "Big Crown",
+    "color": "Green",
+    "release": "2022",
+    "diameter": 40,
+    "shape": "Round",
+    "image": "src/assets/watches/43/big_crown.jpg",
+    "price": "2200",
+    "DateAdded": "2024-10-23"
+  },
+  {
+    "id": "44",
+    "type": "Women's Vintage",
+    "brand": "Mercier",
+    "model": "Serpenti",
+    "color": "Gold",
+    "release": "2010",
+    "diameter": 30,
+    "shape": "Curved",
+    "image": "src/assets/watches/44/serpenti.jpg",
+    "price": "3500",
+    "DateAdded": "2024-11-03"
+  }
 ]
