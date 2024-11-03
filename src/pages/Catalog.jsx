@@ -6,7 +6,6 @@ import '../styles/Catalog.css'
 import { firestore } from '../../firebase'
 import { doc, setDoc, collection } from 'firebase/firestore'
 import { loadAllImages, retrieveSource } from '../utility/retrieveSource.jsx'
-// import { getImageURL } from '../utility/image-util.js'
 
 function Catalog() {
   const [watches, setWatches] = useState([])
