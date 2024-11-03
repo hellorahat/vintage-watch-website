@@ -1,85 +1,89 @@
 .catalog-container {
-    display: flex;
-    padding-right: 200px;
-    padding-left: 50px;
-    padding-top:50px;
+  display: flex;
+  padding-right: 200px;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 
 .watch-list {
-    display: flex;
-    flex-wrap: wrap;
-    grid-template-columns: repeat(5, 200px);
-    gap: 20px;
-    padding: 5px;
-    width: calc(200px * 5 + 20px);
-    box-sizing: border-box;
-    margin-left: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(5, 200px);
+  gap: 20px;
+  padding: 5px;
+  width: calc(200px * 5 + 20px);
+  box-sizing: border-box;
+  margin-left: 25px;
 }
 
 .watch-card {
-    position: relative;
-    width: calc(200px * 1 + 20px);
-    padding: 16px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    height: 380px;
-    
+  position: relative;
+  width: calc(200px * 1 + 20px);
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 380px;
 }
 
 .watch-button {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .heart-button {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
 .watch-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .watch-image {
-    width: 100%;
-    height: 180px;
-    margin-bottom: 15px;
-    object-fit: cover;
-    
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+  object-fit: cover;
 }
 
 .watch-details h3 {
-    font-size: 1.2em;
-    margin: 0;
-    color: #241aa7;
+  font-size: 1.2em;
+  margin: 0;
+  color: #241aa7;
 }
 
 .watch-details p {
-    font-size: 0.9em;
-    color: #562cf0;
-    margin: 5px 0;
+  font-size: 0.9em;
+  color: #562cf0;
+  margin: 5px 0;
 }
+
 .watch-brand {
-    color: #198754;
+  color: #198754;
+  margin-bottom: 0px;
+}
+
+.watch-model {
+  margin-bottom: 50px;
 }
 
 .catalog {
-    display: flex;
-    width: 100%; 
+  display: flex;
+  width: 100%;
 }
 
 .watch-list {
-    flex-grow: 1;
+  flex-grow: 1;
 }
