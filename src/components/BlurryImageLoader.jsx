@@ -4,20 +4,18 @@ import "../styles/BlurryImageLoader.css"; // Import the CSS for the loader
 function BlurryImageLoader({ src, alt }) {
   const [loading, setLoading] = useState(true);
   const [loadPercentage, setLoadPercentage] = useState(0);
-  const [imgLoaded, setImgLoaded] = useState(false); // State to track if the image has loaded
+  const [imgSrc, setImgSrc] = useState(null); // Image source state
 
   useEffect(() => {
     const img = new Image();
     img.src = src;
 
     img.onload = () => {
-      setImgLoaded(true); // Set imgLoaded to true when the image has loaded
-
+      setImgSrc(src); // Set the source to trigger re-render
       const intervalDuration = 5000; // 5 seconds
       const intervalStep = 100; // Total steps to reach 100%
       const intervalTime = intervalDuration / intervalStep; // Time for each increment
 
-      // Start the loading percentage increment
       const interval = setInterval(() => {
         setLoadPercentage((prev) => {
           if (prev < 100) {
@@ -33,19 +31,21 @@ function BlurryImageLoader({ src, alt }) {
 
     img.onerror = () => {
       console.error("Failed to load image:", src);
-      setImgLoaded(false); // Optionally handle the error state
       setLoading(false); // Hide loading overlay on error
     };
 
-    return () => clearInterval(interval); // Cleanup interval on unmount or change
+    return () => {
+      setImgSrc(null); // Clear image source on unmount
+      setLoading(true); // Reset loading state for next use
+    };
   }, [src]);
 
   return (
     <div className="image-container">
-      {imgLoaded && ( // Only render the image if it has loaded
+      {imgSrc && ( // Only render the image if imgSrc is set
         <img
           className="loaded-image"
-          src={src}
+          src={imgSrc}
           alt={alt}
           style={{
             filter: `blur(${scale(loadPercentage, 0, 100, 30, 0)}px)`,
@@ -54,7 +54,7 @@ function BlurryImageLoader({ src, alt }) {
         />
       )}
       {loading &&
-        !imgLoaded && ( // Show loading overlay only when image is loading
+        !imgSrc && ( // Show loading overlay only when image is loading
           <div className="loading-container">
             <div className="bg" />
           </div>
