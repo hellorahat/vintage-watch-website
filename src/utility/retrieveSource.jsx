@@ -24,8 +24,9 @@ loadAllImages();
 
 // Function to retrieve the source URL of an image based on path
 const retrieveSource = (path) => {
-    // console.log(imageSources[path]);
-    return imageSources[path] || null; // Return the src if found, otherwise null
+    const adjustedPath = path.replace('src/', '/');
+    console.log(imageSources[adjustedPath]);
+    return imageSources[adjustedPath] || null; // Return the src if found, otherwise null
 };
 
 export { loadAllImages, retrieveSource };
