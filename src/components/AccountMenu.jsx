@@ -112,7 +112,6 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
             const newLetters = label.innerText
                 .split('')
                 .map((letter, idx) => {
-                    console.log(letter); // Log each letter before returning it wrapped in a span
                     return `<span style="transition-delay:${idx * 50}ms">${letter}</span>`; // Use a unique key for each span
                 })
                 .join('');
