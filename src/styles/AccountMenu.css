@@ -11,16 +11,24 @@
 .label-holder .form-label span {
     display: inline-block;
     min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.label-holder input:focus + .form-label span,
-.label-holder input:valid + .form-label span {
-    color:lightblue
+.label-holder:focus-within .form-label span,
+.label-holder.has-text .form-label span {
+    color: #198754;
+    transform: translateY(-28px)
 }
 
-/* .form-control:focus + .form-label span {
-    color:red;
-} */
+.label-holder input:focus-within {
+    outline: none;
+    box-shadow: none;
+    /* border-bottom-color: lightblue; */
+}
+
+.label-holder .form-label {
+    pointer-events:none; 
+}
 
 .account-menu {
     position: fixed;

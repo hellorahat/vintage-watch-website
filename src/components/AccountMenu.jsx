@@ -103,6 +103,9 @@ const isValidEmail = (email) => {
 function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const emailHasText = email.trim() !== '';
+    const passwordHasText = password.trim() !== '';
+
     useEffect(() => {
         const labels = document.querySelectorAll('.label-holder .form-label');
         labels.forEach(label => {
@@ -110,7 +113,7 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 .split('')
                 .map((letter, idx) => {
                     console.log(letter); // Log each letter before returning it wrapped in a span
-                    return `<span key=${idx}>${letter}</span>`; // Use a unique key for each span
+                    return `<span style="transition-delay:${idx * 50}ms">${letter}</span>`; // Use a unique key for each span
                 })
                 .join('');
             label.innerHTML = newLetters;
@@ -182,8 +185,8 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
 
     return (
         <form>
-            <div class="label-holder mb-3 mt-4">
-                <label for="email" class="form-label mt-">Email</label>
+            <div class={`label-holder mb-3 mt-4 ${emailHasText ? 'has-text' : ''}`}>
+                <label for="email" class="form-label">Email</label>
                 <input
                     type="email"
                     class="form-control"
@@ -191,11 +194,12 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                     aria-describedby="emailHelp"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
-            <div class="label-holder mb-3 mt-4">
+            <div class={`label-holder mb-3 mt-4 ${passwordHasText ? 'has-text' : ''}`}>
                 <label for="password" class="form-label">Password</label>
                 <input 
                 type="password"
@@ -203,6 +207,7 @@ function SignInForm({showErrorMessage, showSuccessMessage, resetMessages}) {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                required
                 />
                 <div className="text-end">
                     <Link to="/forgot-password" className="link-primary mt-1 mb-0">Forgot Password?</Link>
