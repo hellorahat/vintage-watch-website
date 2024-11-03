@@ -216,7 +216,19 @@ function SideBar({ onFilterChange }) {
             ></span>
           </button>
           <div className={`dropdown ${openSection === 6 ? "active" : ""}`}>
-            {["36 mm", "40 mm", "42 mm", "44 mm", "45 mm"].map((diameter) => (
+            {[
+              "28 mm",
+              "30 mm",
+              "32 mm",
+              "36 mm",
+              "38 mm",
+              "40 mm",
+              "41 mm",
+              "42 mm",
+              "43 mm",
+              "44 mm",
+              "45 mm",
+            ].map((diameter) => (
               <p
                 key={diameter}
                 onClick={(event) =>
