@@ -17,7 +17,6 @@ function Contents() {
     <div className='contents'>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/new-arrivals' element={<NewArrivals />}></Route>
         <Route path='/catalog' element={<Catalog />}></Route>
         <Route path='/about-us' element={<AboutUs />}></Route>
         <Route path='/contact-us' element={<ContactUs />}></Route>
