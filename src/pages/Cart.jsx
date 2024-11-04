@@ -1,7 +1,8 @@
 import React from 'react';
 import { useCart } from '../utility/CartContext'; 
 import { useMediaQuery } from 'react-responsive';
-import './Cart.css'; 
+import './Cart.css';
+import CheckoutForm from '../components/CheckoutForm.jsx'
 
 function Cart() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -80,7 +81,8 @@ function DesktopLayout({ cart, removeCart }) {
             )}
             <div className="cart-summary">
                 <h3>Total: ${totalPrice}</h3>
-                <button className="checkout-button">Checkout</button>
+                {/* <button className="checkout-button">Checkout</button> */}
+                <CheckoutForm />
             </div>
         </div>
     );
