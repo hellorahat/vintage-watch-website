@@ -47,6 +47,11 @@
   cursor: pointer;
 }
 
+.favorite-icon {
+  height: 25px;
+  object-fit: contain;
+}
+
 .watch-card:hover {
   transform: scale(1.05);
 }
