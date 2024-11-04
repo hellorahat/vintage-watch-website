@@ -20,15 +20,14 @@ function Product() {
 
   return (
     <div className="product-page">
-      <h1>Product</h1>
-      <hr />
       <img
         src={retrieveSource(watch.image)}
         alt={watch.model}
         className="product-image"
+        style={{height:'350px', width:'350px'}}
       />
-
-      <h2>{watch.brand}</h2>
+      <hr />
+      <h2 className='text-brand'>{watch.brand}</h2>
       <h3>{watch.model}</h3>
       <table id="product-details">
         <tr>
@@ -62,6 +61,14 @@ function Product() {
           </td>
         </tr>
       </table>
+      <button
+          className="mb-3 btn btn-success"
+          variant="contained"
+          color="success"
+          style={{marginLeft:'225px', paddingLeft:'100px', paddingRight:'100px'}}
+        >
+          Add to Cart
+      </button>
     </div>
   );
 }
