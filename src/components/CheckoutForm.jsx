@@ -29,7 +29,7 @@ const CheckoutForm = () => {
     <form onSubmit={handleSubmit}>
       <CardElement />
       <br />
-      <button type="submit" disabled={!stripe}>
+      <button type="submit" className="btn btn-primary" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '5px', paddingBottom: '5px'}} disabled={!stripe}>
         Pay
       </button>
       {error && <p>{error}</p>}

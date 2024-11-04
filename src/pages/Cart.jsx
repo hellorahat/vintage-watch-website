@@ -44,8 +44,8 @@ function DesktopLayout() {
                 <h3>Total: ${totalPrice}</h3>
                 <br />
                 <CheckoutForm />
+                <br />
                 <PaymentRequestButton amount={totalPriceInCents} />
-                
             </div>
         </div>
     );
