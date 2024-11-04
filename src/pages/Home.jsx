@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { firestore } from "../../firebase";
 import { doc, setDoc, collection } from "firebase/firestore";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
+import { useFavorites } from "../utility/FavoritesContext.jsx";
 import MyChatBot from './MyChatBot';
 function Home() {
   const [watches, setWatches] = useState([]);
