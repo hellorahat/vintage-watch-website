@@ -1,23 +1,28 @@
 .product-page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start; /* Aligns content to the top */
   padding: 20px;
 }
 
 .product-image {
   width: 300px;
   height: auto;
-  margin-bottom: 20px;
+  margin-right: 20px; /* Adds space between the image and details */
 }
 
-.product-page h2,
-h3,
-h4 {
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-details h2,
+.product-details h3,
+.product-details h4,
+.product-details p {
   margin: 5px 0;
 }
 
-.wrap-product {
+.product {
   text-decoration: none;
-  color: #198754;
+  z-index: 1;
 }

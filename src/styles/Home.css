@@ -19,9 +19,16 @@
   align-items: center;
 }
 
-.watch-list {
-  justify-content: center;
+.watch-list-home {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(5, 200px);
+  gap: 20px;
+  padding: 5px;
+  width: calc(200px * 5 + 20px);
+  box-sizing: border-box;
+  margin-left: 25px;
 }
 
 .d-block {
@@ -35,4 +42,13 @@
   color: white;
   font-family: "Italianno";
   font-size: 50px;
+}
+
+.cart-icon {
+  height: 30px;
+  object-fit: contain;
+}
+
+.product {
+  text-decoration: none;
 }
