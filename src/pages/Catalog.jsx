@@ -16,7 +16,7 @@ function Catalog() {
   const [loading, setLoading] = useState(true);
   const { favorites, addFavorite } = useFavorites();
   const { addAlert } = useAlerts();
-  const { addCart } = useCart();
+  const { cart, addCart } = useCart();
 
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
@@ -93,7 +93,10 @@ function Catalog() {
               <div
                 className="watch-button"
                 onClick={() => {
-                  addAlert("Added to Cart!");
+                  const exists = cart.some(
+                    (item) => item.id === watch.id
+                  );
+                  if (!exists) addAlert("Added to Cart!");
                   addCart(watch);
                 }}
               >
