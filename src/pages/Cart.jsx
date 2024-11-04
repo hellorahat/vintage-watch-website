@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import './Cart.css';
 import CheckoutForm from '../components/CheckoutForm.jsx'
 import PaymentRequestButton from '../components/PaymentRequestButton';
+import { retrieveSource } from '../utility/retrieveSource.jsx';
 
 function Cart() {
     return (
@@ -29,7 +30,7 @@ function DesktopLayout() {
                 <ul className="cart-list">
                     {cart.map((item) => (
                         <li key={item.id} className="cart-item">
-                            <img src={item.image} alt={item.model} className="cart-image" />
+                            <img src={retrieveSource(item.image)} alt={item.model} className="cart-image" />
                             <div className="cart-info">
                                 <h4>{item.brand} {item.model}</h4>
                                 <p className="cart-price">${item.price}</p>
