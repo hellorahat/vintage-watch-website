@@ -11,12 +11,15 @@ import { firestore } from "../../firebase";
 import { doc, setDoc, collection } from "firebase/firestore";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 import { useFavorites } from "../utility/FavoritesContext.jsx";
+import { useAlerts } from "../utility/AlertContext.jsx";
 import MyChatBot from './MyChatBot';
 function Home() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
   const targetDate = "2024-11-03"; // Hard-coded date
+  const { addFavorite } = useFavorites();
+  const { addAlert } = useAlerts();
 
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
@@ -34,21 +37,6 @@ function Home() {
     };
     fetchImages();
   }, []);
-
-  const addToFavorites = async (watch) => {
-    try {
-      const favoritesRef = doc(collection(firestore, "favorites"), watch.id);
-      await setDoc(favoritesRef, {
-        brand: watch.brand,
-        model: watch.model,
-        image: retrieveSource(watch.image),
-        price: watch.price,
-      });
-      alert(`${watch.model} added to favorites!`);
-    } catch (error) {
-      console.error("Error adding to favorites:", error);
-    }
-  };
 
   if(loading) {
     return <div>Loading...</div>
@@ -100,7 +88,11 @@ function Home() {
                 <p>Price: {watch.price}</p>
                 <div
                   className="like-button"
-                  onClick={() => addToFavorites(watch)}
+                  onClick={() => {
+                    const exists = favorites.some(favorite => favorite.id === watch.id);
+                    if(!exists) addAlert("Added to Favorites!");
+                    addFavorite(watch);
+                  }}
                 >
                   <svg
                     width="25"
