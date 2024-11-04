@@ -2,6 +2,7 @@
 
 import { Box, Stack, Typography, Button } from '@mui/material'
 import { useFavorites } from '../utility/FavoritesContext'
+import { retrieveSource } from '../utility/retrieveSource'
 
 const Favorites = () => {
   const { favorites, removeFavorite } = useFavorites()
@@ -44,7 +45,7 @@ const Favorites = () => {
               borderRight={0}
             >
               <Box display="flex" alignItems="center" gap={3}>
-                <img src={image} alt={model} width="200px" height="200px" style={{ borderRadius: '10px' }} />
+                <img src={retrieveSource(image)} alt={model} width="200px" height="200px" style={{ borderRadius: '10px' }} />
                 <Box>
                   <Typography variant="h5" color="#198754">{brand}</Typography>
                   <Typography variant="subtitle1" color="#666">{model}</Typography>

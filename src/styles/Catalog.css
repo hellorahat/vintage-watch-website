@@ -4,6 +4,7 @@
   padding-left: 50px;
   padding-top: 50px;
   display: flex;
+  margin-left: 50px;
 }
 
 .watch-list {
@@ -12,9 +13,9 @@
   grid-template-columns: repeat(5, 200px);
   gap: 20px;
   padding: 5px;
-  width: calc(200px * 5 + 20px);
+  width: calc(200px * 6 + 20px);
   box-sizing: border-box;
-  margin-left: 25px;
+  margin-left: 50px;
 }
 
 .watch-card {
