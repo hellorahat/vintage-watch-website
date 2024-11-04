@@ -18,7 +18,7 @@ function Home() {
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
   const targetDate = "2024-11-03"; // Hard-coded date
-  const { addFavorite } = useFavorites();
+  const { favorites, addFavorite } = useFavorites();
   const { addAlert } = useAlerts();
 
   useEffect(() => {
