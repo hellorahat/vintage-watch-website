@@ -3,16 +3,16 @@ import Sidebar from "../pages/Sidebar.jsx";
 import Watch from "../components/Watch.jsx";
 import watchesData from "../components/watches.json";
 import "../styles/Catalog.css";
+import iconFavorite from '../assets/favorite.svg'
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 import { useFavorites } from "../utility/FavoritesContext.jsx";
-import iconFavorite from "../assets/favorite.svg";
 import { useAlerts } from "../utility/AlertContext.jsx";
 
 function Catalog() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { addFavorite } = useFavorites();
+  const { favorites, addFavorite } = useFavorites();
   const { addAlert } = useAlerts();
 
   useEffect(() => {
@@ -77,7 +77,6 @@ function Catalog() {
         {filteredWatches.length > 0 ? (
           filteredWatches.map((watch) => (
             <div key={watch.id} className="watch-card">
-              {console.log(retrieveSource(watch.image))}
               <img
                 className="watch-image"
                 src={retrieveSource(watch.image)}
@@ -86,7 +85,11 @@ function Catalog() {
               <h5 className="watch-brand">{watch.brand}</h5>
               <h6 className="watch-model">{watch.model}</h6>
               <h4 className="watch-price">${watch.price}</h4>
-              <div className="heart-button" onClick={() => addFavorite(watch)}>
+              <div className="heart-button" onClick={() => {
+                const exists = favorites.some(favorite => favorite.id === watch.id);
+                if(!exists) addAlert("Added to Favorites!");
+                addFavorite(watch);
+              }}>
                 <img
                   className="favorite-icon"
                   src={iconFavorite}
