@@ -6,16 +6,13 @@ import CheckoutForm from '../components/CheckoutForm.jsx'
 import PaymentRequestButton from '../components/PaymentRequestButton';
 
 function Cart() {
-    const { cart, removeCart } = useCart(); 
-
     return (
-        <>
-            <DesktopLayout cart={cart} removeCart={removeCart} />
-        </>
+        <DesktopLayout />
     );
 }
 
-function DesktopLayout({ cart, removeCart }) {
+function DesktopLayout() {
+    const { cart, removeCart } = useCart();
     //Error handling
     const totalPrice = cart.reduce((acc, item) => {
         const price = parseFloat(item.price); 
@@ -45,8 +42,9 @@ function DesktopLayout({ cart, removeCart }) {
             <div className="cart-summary">
                 <h3>Total: ${totalPrice}</h3>
                 <br />
-                <PaymentRequestButton amount={totalPriceInCents} />
                 <CheckoutForm />
+                <PaymentRequestButton amount={totalPriceInCents} />
+                
             </div>
         </div>
     );
