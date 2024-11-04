@@ -52,6 +52,12 @@
   object-fit: contain;
 }
 
+.favorite-icon:hover {
+  height: 25px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(88%) saturate(7049%) hue-rotate(354deg) brightness(92%) contrast(120%);
+}
+
 .watch-card:hover {
   transform: scale(1.05);
 }
