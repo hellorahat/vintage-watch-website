@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import watchesData from "../components/watches.json"; // Adjust path as necessary
-import "../styles/Product.css"; // Create a CSS file for styling
+import watchesData from "../components/watches.json";
+import "../styles/Product.css";
 import { retrieveSource } from "../utility/retrieveSource.jsx";
 
 function Product() {
@@ -24,10 +24,10 @@ function Product() {
         src={retrieveSource(watch.image)}
         alt={watch.model}
         className="product-image"
-        style={{height:'350px', width:'350px'}}
+        style={{ height: "350px", width: "350px" }}
       />
       <hr />
-      <h2 className='text-brand'>{watch.brand}</h2>
+      <h2 className="text-brand">{watch.brand}</h2>
       <h3>{watch.model}</h3>
       <table id="product-details">
         <tr>
@@ -62,12 +62,16 @@ function Product() {
         </tr>
       </table>
       <button
-          className="mb-3 btn btn-success"
-          variant="contained"
-          color="success"
-          style={{marginLeft:'225px', paddingLeft:'100px', paddingRight:'100px'}}
-        >
-          Add to Cart
+        className="mb-3 btn btn-success"
+        variant="contained"
+        color="success"
+        style={{
+          marginLeft: "225px",
+          paddingLeft: "100px",
+          paddingRight: "100px",
+        }}
+      >
+        Add to Cart
       </button>
     </div>
   );

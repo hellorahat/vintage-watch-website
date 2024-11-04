@@ -7,7 +7,7 @@ import iconFavorite from "../assets/favorite.svg";
 import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 import { useFavorites } from "../utility/FavoritesContext.jsx";
 import { useAlerts } from "../utility/AlertContext.jsx";
-import { useCart } from "../utility/CartContext.jsx"; // cart context
+import { useCart } from "../utility/CartContext.jsx";
 import { Link } from "react-router-dom";
 
 function Catalog() {
@@ -93,9 +93,7 @@ function Catalog() {
               <div
                 className="watch-button"
                 onClick={() => {
-                  const exists = cart.some(
-                    (item) => item.id === watch.id
-                  );
+                  const exists = cart.some((item) => item.id === watch.id);
                   if (!exists) addAlert("Added to Cart!");
                   addCart(watch);
                 }}

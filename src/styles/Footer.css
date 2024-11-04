@@ -1,9 +1,8 @@
-/* Ensure the page takes up the full viewport height */
 footer {
-    background-color: #198754;
-    color: white;
-    padding: 1px;
-    margin-top: 10px;
-    text-align: center;
-    width: 100%;
+  background-color: #198754;
+  color: white;
+  padding: 1px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
 }

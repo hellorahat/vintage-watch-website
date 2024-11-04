@@ -1,100 +1,99 @@
 .label-holder {
-    position: relative;
+  position: relative;
 }
 
 .label-holder .form-label {
-    position:absolute;
-    left: 13px;
-    top: 6px;
+  position: absolute;
+  left: 13px;
+  top: 6px;
 }
 
 .label-holder .form-label span {
-    display: inline-block;
-    min-width: 5px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: inline-block;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .label-holder:focus-within .form-label span,
 .label-holder.has-text .form-label span {
-    color: #198754;
-    transform: translateY(-28px)
+  color: #198754;
+  transform: translateY(-28px);
 }
 
 .label-holder input:focus-within {
-    outline: none;
-    box-shadow: none;
-    /* border-bottom-color: lightblue; */
+  outline: none;
+  box-shadow: none;
 }
 
 .label-holder .form-label {
-    pointer-events:none; 
+  pointer-events: none;
 }
 
 .account-menu {
-    position: fixed;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    right: 1em;
-    top: 6.64em;
-    width: 300px;
-    height: 384px;
-    z-index: 1050;
-    opacity: 0;
-    transition: opacity 0.15s ease;
-    display: None;
+  position: fixed;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  right: 1em;
+  top: 6.64em;
+  width: 300px;
+  height: 384px;
+  z-index: 1050;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  display: None;
 }
 
 .account-menu.active {
-    display: block;
-    background-color: #e6e6e6;
-    opacity: 1;
+  display: block;
+  background-color: #e6e6e6;
+  opacity: 1;
 }
 
 .account-menu.active::after {
-    content: '';
-    position: absolute;
-    top: -15px;          /* Adjust this to move the triangle up or down */
-    right: 8.6em;         /* Center the triangle by adjusting this value */
-    border-left: 14px solid transparent;  /* Adjust size for the triangle */
-    border-right: 14px solid transparent; /* Adjust size for the triangle */
-    border-bottom: 20px solid #e6e6e6;  /* Color of the triangle */
-    z-index: 1050;
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: 8.6em;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 20px solid #e6e6e6;
+  z-index: 1050;
 }
 
 .alert {
-    opacity: 1;
-    transition: opacity 0.5s ease; /* Transition for fade effect */
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .alert.fade-out {
-    opacity: 0; /* Make it transparent for fade-out effect */
+  opacity: 0;
 }
 
 .upper-box {
-    background-color: #d4d4d4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 68px;
-    position: absolute;
-    left: 0;
-    top:0;
-    z-index: 1051;
+  background-color: #d4d4d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 68px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1051;
 }
 
 .links {
-    display: block;
-    margin-bottom: 20px;
-    color: #585858;
-    text-decoration: underline;
+  display: block;
+  margin-bottom: 20px;
+  color: #585858;
+  text-decoration: underline;
 }
 
 .links:hover {
-    color:rgb(5, 5, 5);
+  color: rgb(5, 5, 5);
 }
 
 .sign-in {
-    margin-top: 4em;
+  margin-top: 4em;
 }

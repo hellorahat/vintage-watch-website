@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import React, { useState } from "react";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 const CheckoutForm = () => {
   const stripe = useStripe();
@@ -13,7 +13,7 @@ const CheckoutForm = () => {
 
     const card = elements.getElement(CardElement);
     const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: 'card',
+      type: "card",
       card,
     });
 
@@ -21,7 +21,6 @@ const CheckoutForm = () => {
       setError(error.message);
     } else {
       setError(null);
-      // Handle payment confirmation here
     }
   };
 
@@ -29,7 +28,17 @@ const CheckoutForm = () => {
     <form onSubmit={handleSubmit}>
       <CardElement />
       <br />
-      <button type="submit" className="btn btn-primary" style={{paddingLeft:'50px', paddingRight:'50px', paddingTop: '5px', paddingBottom: '5px'}} disabled={!stripe}>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        style={{
+          paddingLeft: "50px",
+          paddingRight: "50px",
+          paddingTop: "5px",
+          paddingBottom: "5px",
+        }}
+        disabled={!stripe}
+      >
         Pay
       </button>
       {error && <p>{error}</p>}

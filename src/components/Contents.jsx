@@ -8,7 +8,6 @@ import ContactUs from "../pages/ContactUs";
 import Favorites from "../pages/Favorites";
 import Cart from "../pages/Cart";
 import Product from "../pages/product";
-import Support from "../pages/Support";
 import "../styles/Contents.css";
 
 function Contents() {
@@ -22,7 +21,6 @@ function Contents() {
         <Route path="/favorites" element={<Favorites />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="/support" element={<Support />}></Route>
       </Routes>
     </div>
   );

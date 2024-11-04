@@ -12,13 +12,13 @@ import { loadAllImages, retrieveSource } from "../utility/retrieveSource.jsx";
 import { useFavorites } from "../utility/FavoritesContext.jsx";
 import { useAlerts } from "../utility/AlertContext.jsx";
 import "../styles/Product.css";
-import { useCart } from "../utility/CartContext.jsx"; // cart context
+import { useCart } from "../utility/CartContext.jsx";
 
 function Home() {
   const [watches, setWatches] = useState([]);
   const [filteredWatches, setFilteredWatches] = useState([]);
   const [loading, setLoading] = useState(true);
-  const targetDate = "2024-11-03"; // Hard-coded date
+  const targetDate = "2024-11-03";
   const { favorites, addFavorite } = useFavorites();
   const { addAlert } = useAlerts();
   const { addCart } = useCart();
@@ -26,8 +26,6 @@ function Home() {
   useEffect(() => {
     const watchInstances = watchesData.map((item) => new Watch(item));
     setWatches(watchInstances);
-
-    // Filter watches based on the target date
     const filteredWatches = watchInstances.filter(
       (watch) => watch.DateAdded === targetDate
     );

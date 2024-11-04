@@ -18,7 +18,6 @@ function SideBar({ onFilterChange }) {
   };
 
   const handleFilterClick = (event, filterType, value) => {
-    // Prevent the click event from bubbling up to the button
     event.stopPropagation();
 
     const currentFilters = selectedFilters[filterType];

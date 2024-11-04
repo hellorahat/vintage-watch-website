@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
-import { Box, Stack, Typography, Button } from '@mui/material'
-import { useFavorites } from '../utility/FavoritesContext'
-import { retrieveSource } from '../utility/retrieveSource'
+import { Box, Stack, Typography, Button } from "@mui/material";
+import { useFavorites } from "../utility/FavoritesContext";
+import { retrieveSource } from "../utility/retrieveSource";
 
 const Favorites = () => {
-  const { favorites, removeFavorite } = useFavorites()
+  const { favorites, removeFavorite } = useFavorites();
 
   const addToCart = (watch) => {
     removeFavorite(watch);
-  }
+  };
 
   return (
     <Box
@@ -24,7 +24,7 @@ const Favorites = () => {
       <Box width="80%" mb={4}>
         <Typography variant="h3" textAlign="center" color="#333">
           Favorites
-          <hr style={{ marginTop: '20px', marginBottom: '-30px' }} />
+          <hr style={{ marginTop: "20px", marginBottom: "-30px" }} />
         </Typography>
       </Box>
       {favorites.length > 0 ? (
@@ -45,21 +45,33 @@ const Favorites = () => {
               borderRight={0}
             >
               <Box display="flex" alignItems="center" gap={3}>
-                <img src={retrieveSource(image)} alt={model} width="200px" height="200px" style={{ borderRadius: '10px' }} />
+                <img
+                  src={retrieveSource(image)}
+                  alt={model}
+                  width="200px"
+                  height="200px"
+                  style={{ borderRadius: "10px" }}
+                />
                 <Box>
-                  <Typography variant="h5" color="#198754">{brand}</Typography>
-                  <Typography variant="subtitle1" color="#666">{model}</Typography>
-                  <Typography variant="subtitle2" color="#999">Price: {price}</Typography>
+                  <Typography variant="h5" color="#198754">
+                    {brand}
+                  </Typography>
+                  <Typography variant="subtitle1" color="#666">
+                    {model}
+                  </Typography>
+                  <Typography variant="subtitle2" color="#999">
+                    Price: {price}
+                  </Typography>
                 </Box>
               </Box>
               <div className="d-flex flex-column justify-content-center">
                 <Button
-                    className="mb-3 outline-success"
-                    variant="contained"
-                    color="success"
-                    onClick={() => addToCart(id)}
-                  >
-                    Add to Cart
+                  className="mb-3 outline-success"
+                  variant="contained"
+                  color="success"
+                  onClick={() => addToCart(id)}
+                >
+                  Add to Cart
                 </Button>
                 <Button
                   variant="contained"
@@ -78,7 +90,7 @@ const Favorites = () => {
         </Typography>
       )}
     </Box>
-  )
-}
+  );
+};
 
-export default Favorites
+export default Favorites;

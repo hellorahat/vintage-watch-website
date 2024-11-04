@@ -1,18 +1,18 @@
 .main-alert {
-    margin-bottom: 10px; /* Space between alerts */
-    opacity: 1;
-    transition: opacity 0.5s ease;
+  margin-bottom: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .main-alert.fade-out {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fixed-bottom {
-    position: fixed;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    z-index: 1050;
-    padding: 0 15px;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  padding: 0 15px;
 }

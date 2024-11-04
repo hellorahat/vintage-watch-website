@@ -1,31 +1,32 @@
 .custom-text {
-    font-family: 'Italianno', sans-serif;
-    margin-left: 8px;
-    font-size: 30px;
+  font-family: "Italianno", sans-serif;
+  margin-left: 8px;
+  font-size: 30px;
 }
 
 #main-nav-button.btn {
-    transition: filter 0.3s;
+  transition: filter 0.3s;
 }
 
 #main-nav-button.btn:hover {
-    filter: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(300%) hue-rotate(90deg) brightness(85%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(300%)
+    hue-rotate(90deg) brightness(85%) contrast(85%);
 }
 
 .form-control[type="search"] {
-    position: relative;
-    right: -15px;
-    width: 0px;
-    opacity: 0;
-    transition: width 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  right: -15px;
+  width: 0px;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease;
 }
 
 .form-control.active[type="search"] {
-    opacity: 1;
-    width: 200px;
+  opacity: 1;
+  width: 200px;
 }
 
 .navbar {
-    background-color: #EEEEEE;
-    top: 20px;
+  background-color: #eeeeee;
+  top: 20px;
 }

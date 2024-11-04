@@ -15,7 +15,7 @@ export const UserProvider = ({ children }) => {
 
       if (!currentUser.emailVerified) return;
 
-      const name = currentUser.email.split("@")[0]; // Extracts the part before @
+      const name = currentUser.email.split("@")[0];
       setUser({
         ...currentUser,
         name: name,

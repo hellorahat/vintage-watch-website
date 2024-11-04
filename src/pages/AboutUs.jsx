@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import stats from "../assets/about-us.jpg";
-import newImage from "../assets/newImage.jpg"; // Import the image directly
+import newImage from "../assets/newImage.jpg";
 import "../styles/AboutUs.css";
 import BlurryImageLoader from "../components/BlurryImageLoader";
 
@@ -21,9 +21,10 @@ function MobileLayout() {
 function DesktopLayout() {
   return (
     <div>
-      <br/><br/>
+      <br />
+      <br />
       <h1 className="who">Who We Are</h1>
-      
+
       <div className="who">
         Welcome to Vintage Watch Co., where time-honored craftsmanship meets
         modern elegance. We are passionate collectors and enthusiasts of vintage
@@ -38,7 +39,7 @@ function DesktopLayout() {
       <br />
       <br />
       <h1 className="who">Our Collection</h1>
-     
+
       <div className="who">
         Our carefully curated collection features a diverse range of vintage
         watches from renowned brands, each with its unique charm and character.
@@ -49,13 +50,9 @@ function DesktopLayout() {
       <br />
       <br />
       <div>
-        <BlurryImageLoader
-          src={newImage} // Use the imported image directly
-          alt="Vintage Watch" // Updated alt text
-        />
+        <BlurryImageLoader src={newImage} alt="Vintage Watch" />
       </div>
     </div>
-    
   );
 }
 
