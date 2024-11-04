@@ -1,6 +1,5 @@
 .product-page {
-  display: flex;
-  align-items: flex-start; /* Aligns content to the top */
+  display: flex; /* Aligns content to the top */
   padding: 20px;
 }
 
@@ -15,14 +14,18 @@
   flex-direction: column;
 }
 
-.product-details h2,
-.product-details h3,
-.product-details h4,
-.product-details p {
-  margin: 5px 0;
+#product-details table {
+  margin: 5px;
+}
+tr {
+  width: 50px;
 }
 
 .product {
   text-decoration: none;
   z-index: 1;
+}
+
+h1 {
+  text-align: center;
 }

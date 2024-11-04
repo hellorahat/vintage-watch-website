@@ -27,16 +27,41 @@ function Product() {
         alt={watch.model}
         className="product-image"
       />
-      <div className="product-details">
-        <h2>{watch.brand}</h2>
-        <h3>{watch.model}</h3>
-        <p>Price: ${watch.price}</p>
-        <p>Release Date: {watch.releaseDate}</p>
-        <p>Type: {watch.type}</p>
-        <p>Diameter: {watch.diameter}</p>
-        <p>Shape: {watch.shape}</p>
-        <p>Description: {watch.description}</p>
-      </div>
+
+      <h2>{watch.brand}</h2>
+      <h3>{watch.model}</h3>
+      <table id="product-details">
+        <tr>
+          <td>
+            <p>Price: ${watch.price}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Release Date: {watch.release}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Type: {watch.type}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Diameter: {watch.diameter}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Shape: {watch.shape}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Description: {watch.description}</p>
+          </td>
+        </tr>
+      </table>
     </div>
   );
 }
